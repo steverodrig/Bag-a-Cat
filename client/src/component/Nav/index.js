@@ -17,10 +17,10 @@ import {
             <nav className = "navbar">
                
             <ul className = "navbar-nav">
-        <li className="logo">          
-        <br />
-        <FontAwesomeIcon icon="cat"/>
-        <span className="link-text">B-A-C</span>   
+            <li className="logo">          
+            <br />
+            <FontAwesomeIcon icon="cat"/>
+            <span className="link-text">B-A-C</span>   
             
         </li>
                                 
