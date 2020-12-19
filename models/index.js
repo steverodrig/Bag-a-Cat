@@ -1,3 +1,3 @@
 module.exports = {
-  Book: require("./petCat")
+  Book: require("./Cat")
 };
