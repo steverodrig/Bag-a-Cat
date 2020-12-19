@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CatCard from '../component/CatCard'
 
 class Adopt extends Component {
+    
 
     state= {
         CatCard
