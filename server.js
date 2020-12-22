@@ -1,5 +1,4 @@
 const express = require("express");
-const faker = require("faker");
 const mongoose = require("mongoose");
 const routes = require("./routes/api/cats");
 const app = express();
@@ -41,6 +40,12 @@ app.get('/v1/cat/:id',function (req,res) {
 
 
 
+app.get("/v1/cats", function (req, res) {
+  Cat.find()
+      .then(cats => res.json(cats))
+      .catch(err => res.status(400).json("Error: " + err));
+      console.log("test")
+});
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/catlist");
