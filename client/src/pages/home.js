@@ -9,10 +9,9 @@ function Home() {
 
     return (
         <>
-            <SplashScreen />
-            <Adopt />
-            <Footer />
-           
+         <SplashScreen />
+         <Adopt />
+         <Footer />            
         </>
     )
 }
