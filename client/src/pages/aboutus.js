@@ -5,7 +5,7 @@ import { TweenMax, Power3 } from "gsap";
 
 function Aboutus() {
     let Title = useRef(null);
-  let textItem = useRef(null)
+    let textItem = useRef(null)
 
   useEffect(() => {
     console.log(Title);

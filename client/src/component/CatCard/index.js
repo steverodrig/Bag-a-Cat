@@ -1,24 +1,39 @@
 import React from "react";
-import './Card.css';
+import '../Cards.css';
+import { Link } from "react-router-dom"
+
 
 
 
 
 function CatCard(props) {
 
+ 
+
  return (
-    <div className="card" style="width: 18rem;">
-    <img src={props.image} className="card-img-top" alt={props.name}/>
-    <div className="card-body">
-      <h5 className="card-title">{props.name}</h5>
-      <p className="card-text">{props.description}</p>
-      <a href="details about cat" className="btn btn-primary">Learn More</a>
-    </div>
-  </div>
+     <>
+      <li className='cards__item'>
+        <Link className='cards__item__link' to={props.path}>
+          <figure className='cards__item__pic-wrap' data-category={props.name}>
+            <img
+              className='cards__item__img'
+              alt='cat image'
+              src={"https://picsum.photos/id/1/200/300"}
+            />
+          </figure>
+          <div className='cards__item__info'>
+            <h5 className='cards__item__text'>{props.name}</h5>
+            <a href="details about cat" className="btn btn-primary">LEARN MORE</a>
+          </div>
+        </Link>
+      </li>
+      </>
+   
   )
 }
 
 export default CatCard
+
 
 
 
