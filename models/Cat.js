@@ -7,9 +7,8 @@ const CatSchema = new Schema({
     type: String, 
     required: true
     },
-    image:String,
-    description:String,
-
+    image: String,
+    description: String
 })
 
 const Cat = mongoose.model('Cat', CatSchema);

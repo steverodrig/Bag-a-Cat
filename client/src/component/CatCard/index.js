@@ -6,9 +6,7 @@ import { Link } from "react-router-dom"
 
 
 
-function CatCard(props) {
-
- 
+function CatCard(props) { 
 
  return (
      <>
@@ -28,11 +26,10 @@ function CatCard(props) {
         </Link>
       </li>
       </>
-   
   )
 }
 
-export default CatCard
+export default CatCard;
 
 
 
