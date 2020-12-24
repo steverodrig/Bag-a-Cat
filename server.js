@@ -16,35 +16,37 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 //app.use(routes);
 
+// Finds all Cats
 app.get('/v1/cats',function (req, res) {
   dB.Cat.find()
       .then(cats => res.json(cats))
-      .catch(err => res.status(422).json('Error: ' + err));
+      .catch(err => res.status(422).json('Cannot Find Cats: ' + err));
 });
 
+// Adds new Cat
 app.post('/v1/cat/new',function (req,res) {
   console.log(req.body);
   dB.Cat.create(req.body)
   .then((data) => res.json(data))
-  .catch(err => res.status(422).json('Error: ' + err));
+  .catch(err => res.status(422).json('Could not Add: ' + err));
 
 });
 
+// Find Cat by ID
 app.get('/v1/cat/:id',function (req,res) {
   console.log(req.body);
-  dB.Cat.findOne({_id: req.params.id})
+  dB.Cat.findById({_id: req.params.id})
   .then((data) => res.json(data))
-  .catch(err => res.status(422).json('Error: ' + err));
+  .catch(err => res.status(422).json('Cant find Cat: ' + err));
 
 });
 
+// Finds a Cat by ID and Updates
+app.put("/v1/cat/:id",function (req, res){
+  dB.Cat.findByIdAndUpdate({ _id: req.params.id },req.body)
+  .then((data) => res.json(data))
+  .catch(err => res.status(422).json('Update Could Not Occur : ' + err));
 
-
-app.get("/v1/cats", function (req, res) {
-  Cat.find()
-      .then(cats => res.json(cats))
-      .catch(err => res.status(400).json("Error: " + err));
-      console.log("test")
 });
 
 // Connect to the Mongo DB
