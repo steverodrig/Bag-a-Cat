@@ -13,6 +13,8 @@ function Adopt() {
     } return isAuthenticated && (
         <Adwrap />
     )
+// props will need to be updated with actual data from get request
+           
 }
 
 export default Adopt;

@@ -22,33 +22,36 @@ function Adwrap() {
     }, [])
 
 // props will need to be updated with actual data from get request
- return (
-    <div className='cards'>
-     <h1>Check out these EPIC Kitty Cats!</h1>
-     <div className='cards__container'>
-       <div className='cards__wrapper'>
-         <ul className='cards__items'>
-         <div>
-             {cats.length > 0 ? (
-             <div className="container flex-box flex-items">
-             {cats.map(cat => {
-             return (
-             <CatCard 
-             CatImage={cat.image}
-              name={cat.name}
-             description={cat.description}/>
-         );
-         })}
-     </div>
-     ): (
-         <h3>No cats available at this time.  Sorry.</h3>
-     )}
-     </div>       
-         </ul>
-       </div>
+return (
+  <div className='cards'>
+   <h1>Check out these EPIC Kitty Cats!</h1>
+   <div className='cards__container'>
+     <div className='cards__wrapper'>
+       
+           {cats.length > 0 ? (
+               // <>
+       <ul className='cards__items'>
+           {cats.map(cat => {
+           return (
+           <CatCard 
+           CatImage={cat.image}
+            name={cat.name}
+           description={cat.description}/>
+       );
+       })}
+       </ul>
+   // </>
+   ): (
+       <h3>No cats available at this time.  Sorry.</h3>
+   )}
+        
      </div>
    </div>
- )  
+ </div>
+   
+
+
+)   
 }
 
 export default Adwrap;
