@@ -16,7 +16,7 @@ function CatCard(props) {
           <figure className='cards__item__pic-wrap' data-category={props.name}>
             <img
               className='cards__item__img'
-              alt='cat image'
+              alt='cat'
               src={"https://picsum.photos/id/1/200/300"}
             />
           </figure>

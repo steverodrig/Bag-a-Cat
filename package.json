@@ -21,6 +21,7 @@
     "nodemon": "^1.19.4"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^1.2.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.13",
@@ -29,6 +30,7 @@
     "gsap": "^3.5.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-share": "^4.3.1"
   }
 }

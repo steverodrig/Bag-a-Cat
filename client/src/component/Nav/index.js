@@ -1,15 +1,24 @@
 import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import './nav.css';
-import { Button } from '../button'
+import LoginButton from "../LoginBtn";
+import LogoutButton from "../LogoutBtn";
+import { useAuth0 } from '@auth0/auth0-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import Profile from "../Profile";
 
 function Navbar() {
     const [click, setClick] = useState(false)
     const [button, setButton] = useState(true);
     const handleClick = () => setClick(!click);
     const closeMobleMenu = () => setClick(false);
+    const { isAuthenticated, loginWithRedirect } = useAuth0();
+
+    function verify() {
+        if (!isAuthenticated) {
+            loginWithRedirect();
+        }
+    }
 
     const showButton = () => {
         if(window.innerWidth <= 960) {
@@ -29,6 +38,7 @@ function Navbar() {
         <>
         <nav className="navbar">
             <div className="navbar-container">
+                <Profile />
                <Link to="/" className="navbar-logo" onClick={closeMobleMenu}>
                <FontAwesomeIcon icon="cat" />
                   B-A-C                  
@@ -43,7 +53,7 @@ function Navbar() {
                     </Link>
                     </li>
                    <li className='nav-item'>
-                    <Link to='/adopt' className='nav-links' onClick={closeMobleMenu}>
+                    <Link to='/adopt' className='nav-links' onClick={verify}>
                         Adopt
                     </Link>                       
                    </li>
@@ -52,13 +62,9 @@ function Navbar() {
                         About us
                     </Link>                       
                    </li>
-                   <li className='nav-item'>
-                    <Link to='/signin' className='nav-links-mobile' onClick={closeMobleMenu}>
-                        Sign in
-                    </Link>                       
-                   </li>
                </ul>
-               {button && <Button buttonStyle='btn--outline'>Sign in</Button> }
+               <LoginButton />
+               <LogoutButton />
             </div>
         </nav>
         </>
@@ -66,50 +72,4 @@ function Navbar() {
 }
 
 
- export default Navbar
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ export default Navbar;
