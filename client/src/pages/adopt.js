@@ -23,25 +23,32 @@ function Adopt() {
 
 // props will need to be updated with actual data from get request
     return (
-        <div>
-        {cats.length > 0 ? (
-        <div className="container flex-box flex-items">
-            {cats.map(cat => {
+       <div className='cards'>
+        <h1>Check out these EPIC Kitty Cats!</h1>
+        <div className='cards__container'>
+          <div className='cards__wrapper'>
+            <ul className='cards__items'>
+            <div>
+                {cats.length > 0 ? (
+                <div className="container flex-box flex-items">
+                {cats.map(cat => {
                 return (
-             <CatCard 
-             CatImage={cat.image}
-             name={cat.name}
-             description={cat.description}/>
+                <CatCard 
+                CatImage={cat.image}
+                 name={cat.name}
+                description={cat.description}/>
             );
             })}
         </div>
         ): (
             <h3>No cats available at this time.  Sorry.</h3>
         )}
+        </div>       
+            </ul>
+          </div>
         </div>
-        );
-    
-
+      </div>
+    )             
 }
 
 export default Adopt;
