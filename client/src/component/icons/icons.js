@@ -1,4 +1,4 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCat } from '@fortawesome/free-solid-svg-icons';
+import { faCat, faBars } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faCat)
+library.add(faCat, faBars)
