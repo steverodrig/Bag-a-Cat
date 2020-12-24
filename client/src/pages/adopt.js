@@ -23,8 +23,7 @@ function Adopt() {
 
 // props will need to be updated with actual data from get request
     return (
-
-        <div className='cards'>
+       <div className='cards'>
         <h1>Check out these EPIC Kitty Cats!</h1>
         <div className='cards__container'>
           <div className='cards__wrapper'>
@@ -44,14 +43,12 @@ function Adopt() {
         ): (
             <h3>No cats available at this time.  Sorry.</h3>
         )}
-        </div>
-              
+        </div>       
             </ul>
           </div>
         </div>
       </div>
     )             
-
 }
 
 export default Adopt;
