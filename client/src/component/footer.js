@@ -2,7 +2,22 @@ import React from 'react';
 import '../component/footer.css';
 import { Button } from '../component/button';
 import { Link } from 'react-router-dom';
+import {
+  TwitterShareButton,
+  TwitterIcon,
+  FacebookShareButton,
+  FacebookIcon,
+  RedditShareButton,
+  RedditIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  PinterestShareButton,
+  PinterestIcon,
+} from "react-share";
 
+const shareUrl = 'http://github.com';
+    const title = 'GitHub';
+    
 function Footer() {
   return (
     <div className='footer-container'>
@@ -69,48 +84,47 @@ function Footer() {
             </Link>
           </div>
           <small class='website-rights'>B-A-C © 2020</small>
-          <div class='social-icons'>
-            <Link
-              class='social-icon-link facebook'
-              to='/'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <i class='fab fa-facebook-f' />
-            </Link>
-            <Link
-              class='social-icon-link instagram'
-              to='/'
-              target='_blank'
-              aria-label='Instagram'
-            >
-              <i class='fab fa-instagram' />
-            </Link>
-            <Link
-              class='social-icon-link youtube'
-              to='/'
-              target='_blank'
-              aria-label='Youtube'
-            >
-              <i class='fab fa-youtube' />
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='Twitter'
-            >
-              <i class='fab fa-twitter' />
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <i class='fab fa-linkedin' />
-            </Link>
-          </div>
+          <div>
+          <TwitterShareButton
+            url={shareUrl}
+            title={title}>
+            <TwitterIcon size={32} round />
+          </TwitterShareButton>
+        </div>
+
+        <div>
+          <FacebookShareButton
+            url={shareUrl}
+            quote={title}>
+            <FacebookIcon size={32} round />
+          </FacebookShareButton>
+        </div>
+
+        <div>
+          <RedditShareButton
+            url={shareUrl}
+            title={title}
+            windowWidth={660}
+            windowHeight={460}>
+            <RedditIcon size={32} round />
+          </RedditShareButton>
+        </div>
+
+        <div>
+          <LinkedinShareButton url={shareUrl}>
+            <LinkedinIcon size={32} round />
+          </LinkedinShareButton>
+        </div>
+
+        <div>
+          <PinterestShareButton
+            url={String(window.location)}
+            media={`${String(window.location)}`}>
+            <PinterestIcon size={32} round />
+          </PinterestShareButton>
+        </div>
+        
+        <div></div>
         </div>
       </section>
     </div>
