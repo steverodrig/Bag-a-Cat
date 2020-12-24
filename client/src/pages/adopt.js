@@ -27,10 +27,10 @@ function Adopt() {
         <h1>Check out these EPIC Kitty Cats!</h1>
         <div className='cards__container'>
           <div className='cards__wrapper'>
-            <ul className='cards__items'>
-            <div>
+            
                 {cats.length > 0 ? (
-                <div className="container flex-box flex-items">
+                    // <>
+            <ul className='cards__items'>
                 {cats.map(cat => {
                 return (
                 <CatCard 
@@ -39,15 +39,18 @@ function Adopt() {
                 description={cat.description}/>
             );
             })}
-        </div>
+            </ul>
+        // </>
         ): (
             <h3>No cats available at this time.  Sorry.</h3>
         )}
-        </div>       
-            </ul>
+             
           </div>
         </div>
       </div>
+        
+
+
     )             
 }
 
