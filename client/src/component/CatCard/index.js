@@ -1,6 +1,8 @@
 import React from "react";
 import '../Cards.css';
+//import learnMore from "./pages/learnMore"
 import { Link } from "react-router-dom"
+import {  BrowserRouter as Router, Route,} from "react-router-dom";
 
 function CatCard (props) {
 
@@ -17,10 +19,13 @@ function CatCard (props) {
           </figure>
           <div className='cards__item__info'>
             <h5 className='cards__item__text'>{props.name}</h5>
-            <a href="details about cat" className="btn btn-primary">LEARN MORE</a>
+            <Link to={`/learnMore/${props.catID}`} className='btn btn-primary'>
+                More info
+            </Link>  
+            
           </div>
         </Link>
-      </li>  
+      </li>
   )
 }
 
