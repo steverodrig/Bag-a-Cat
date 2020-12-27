@@ -4,10 +4,10 @@ import '../Cards.css';
 import { Link } from "react-router-dom"
 import {  BrowserRouter as Router, Route,} from "react-router-dom";
 
+
 function CatCard (props) {
 
  return (
-     
       <li className='cards__item'>
         <Link className='cards__item__link' to={props.path}>
           <figure className='cards__item__pic-wrap' data-category={props.name}>
@@ -25,7 +25,7 @@ function CatCard (props) {
             
           </div>
         </Link>
-      </li>
+      </li>  
   )
 }
 
