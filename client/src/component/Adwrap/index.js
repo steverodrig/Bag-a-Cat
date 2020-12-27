@@ -36,7 +36,8 @@ return (
            <CatCard 
            CatImage={cat.image}
             name={cat.name}
-           description={cat.description}/>
+           description={cat.description}
+           catID={cat._id}/>
        );
        })}
        </ul>
