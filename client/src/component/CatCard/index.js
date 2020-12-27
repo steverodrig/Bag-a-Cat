@@ -17,7 +17,7 @@ function CatCard(props) {
             <img
               className='cards__item__img'
               alt='cat'
-              src={"https://picsum.photos/id/1/200/300"}
+              src={"https://placekitten.com/200/300"}
             />
           </figure>
           <div className='cards__item__info'>

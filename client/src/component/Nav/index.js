@@ -8,31 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Profile from "../Profile";
 
 function Navbar() {
-    const [click, setClick] = useState(false)
-    const [button, setButton] = useState(true);
+    const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
     const closeMobleMenu = () => setClick(false);
-    const { isAuthenticated, loginWithRedirect } = useAuth0();
-
-    function verify() {
-        if (!isAuthenticated) {
-            loginWithRedirect();
-        }
-    }
-
-    const showButton = () => {
-        if(window.innerWidth <= 960) {
-            setButton(false)
-        } else {
-            setButton(true);
-        }
-    };
-  useEffect(() => {      
-      showButton();
-      },[]);
-
-    window.addEventListener('resize', showButton);
-   
 
     return (
         <>
@@ -53,7 +31,7 @@ function Navbar() {
                     </Link>
                     </li>
                    <li className='nav-item'>
-                    <Link to='/adopt' className='nav-links' onClick={verify}>
+                    <Link to='/adopt' className='nav-links'> 
                         Adopt
                     </Link>                       
                    </li>

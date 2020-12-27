@@ -6,9 +6,9 @@ import './splashscreen.css';
 function SplashScreen() {
   return (
     <div className='splash-container'>
-      <video src="/video/BAC.mp4" autoPlay loop muted />
+      <video src="/video/B-A-C.mp4" autoPlay loop muted />
       <h1>BAG A CAT</h1>
-      <p>like having a mini vilosal raptor</p>
+      <p>like having a mini velociraptor</p>
                <p>in your home</p>
       <div className='splash-btns'>
         <Button
