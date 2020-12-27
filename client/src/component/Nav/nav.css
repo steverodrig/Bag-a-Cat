@@ -36,7 +36,7 @@
   
   .nav-menu {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     grid-gap: 10px;
     list-style: none;
     text-align: center;
@@ -48,7 +48,34 @@
   .nav-item {
     height: 80px;
   }
-  
+
+  .nav-prof {
+    align-items: center;
+  }
+
+  .prof-nm {
+    margin-right: 22px;
+    margin-left: 8px;
+    color: #fff;
+    font-size: small;
+  }
+
+  .prof-img {
+    border-radius: 50%;
+    height: 60%;
+  }
+
+  .logoutBtn {
+    margin-left: 15rem;
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .nav-prof:hover .logoutBtn {
+    display: block;
+  }
+
   .nav-links {
     color: #fff;
     display: flex;
