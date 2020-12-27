@@ -12,6 +12,7 @@ const Profile = () => {
 
   return (
     isAuthenticated && (
+
       <div className="navbar nav-prof">
         <img className="prof-img" src={user.picture} alt={user.name} />
         <h2 className="prof-nm" >{user.name}</h2>

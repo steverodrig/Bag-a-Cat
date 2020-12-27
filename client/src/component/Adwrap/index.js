@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CatCard from '../CatCard';
 import API from "../../utils/API";
 
+
 function Adwrap() {
 
     const [cats, setCats] = useState([]);
@@ -23,7 +24,7 @@ function Adwrap() {
 
 // props will need to be updated with actual data from get request
 return (
-  <div className='cards'>
+  <div className='cards'>   
    <h1>Check out these EPIC Kitty Cats!</h1>
    <div className='cards__container'>
      <div className='cards__wrapper'>
