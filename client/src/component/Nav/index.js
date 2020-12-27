@@ -5,7 +5,7 @@ import LoginButton from "../LoginBtn";
 import LogoutButton from "../LogoutBtn";
 import { useAuth0 } from '@auth0/auth0-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Profile from "../Profile";
+
 
 function Navbar() {
     const [click, setClick] = useState(false)
@@ -37,8 +37,7 @@ function Navbar() {
     return (
         <>
         <nav className="navbar">
-            <div className="navbar-container">
-                <Profile />
+            <div className="navbar-container">               
                <Link to="/" className="navbar-logo" onClick={closeMobleMenu}>
                <FontAwesomeIcon icon="cat" />
                   B-A-C                  
@@ -46,8 +45,9 @@ function Navbar() {
                <div className="menu-icon" onClick={handleClick}>
                    <i className={click ? 'fas fa-cat' : 'fas fa-bars'} />
                </div>
+               
                <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                   <li className='nav-item'>
+                   <li className='nav-item'>                    
                     <Link to='/' className='nav-links' onClick={closeMobleMenu}>
                         Home
                     </Link>
