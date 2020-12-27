@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import './nav.css';
 import LoginButton from "../LoginBtn";
-import LogoutButton from "../LogoutBtn";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Profile from "../Profile";
 
