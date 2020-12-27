@@ -3,8 +3,18 @@
 }
 
 .btn {
-    padding: 8px 20px;
+    padding-top: 8px;
+    margin-top: 25px;
     border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.outBtn {
+    margin-top: 5px;
+    border-radius: 2px;
+    min-width: 90px;
     outline: none;
     border: none;
     cursor: pointer;
@@ -37,6 +47,18 @@
 }
 
 .btn--medium:hover, .btn--large:hover {
+    background: #fff;
+    color: #242424;
+    transition: all 0.3s ease-out;
+}
+
+.outBtn:hover {
+    background: #fff;
+    color: #242424;
+    transition: all 0.3s ease-out;
+}
+
+.btn:hover {
     background: #fff;
     color: #242424;
     transition: all 0.3s ease-out;
