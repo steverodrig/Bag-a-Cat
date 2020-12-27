@@ -8,7 +8,7 @@ const LoginButton = () => {
   const { isAuthenticated } = useAuth0();
 
   return !isAuthenticated && (
-  <button className='btn--outline' onClick={() => loginWithRedirect()}>Log In</button>)
+  <button className='btn--outline btn ' onClick={() => loginWithRedirect()}>Log In</button>)
 };
 
 export default LoginButton;
