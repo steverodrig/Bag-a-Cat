@@ -34,7 +34,6 @@ app.post('/v1/cat/new',function (req,res) {
 
 // Find Cat by ID
 app.get('/v1/cat/:id',function (req,res) {
-  console.log(req.body);
   dB.Cat.findById({_id: req.params.id})
   .then((data) => res.json(data))
   .catch(err => res.status(422).json('Cant find Cat: ' + err));
