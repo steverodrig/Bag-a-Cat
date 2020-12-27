@@ -5,5 +5,8 @@ export default {
 
     getCats: function() {
         return axios.get("/v1/cats");
+    },
+    getCatDetails: function(id) {
+        return axios.get(`/v1/cat/${id}`);
     }
 };
