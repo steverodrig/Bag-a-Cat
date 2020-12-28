@@ -5,7 +5,6 @@ import LoginButton from "../LoginBtn";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Profile from "../Profile"
 
-
 function Navbar() {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
@@ -22,8 +21,9 @@ function Navbar() {
                <div className="menu-icon" onClick={handleClick}>
                    <i className={click ? 'fas fa-cat' : 'fas fa-bars'} />
                </div>
-               
-              
+                    <div className="menu-icon" onClick={handleClick}>
+                        <i className={click ? 'fas fa-cat' : 'fas fa-bars'} />
+                    </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
                             <Link to='/' className='nav-links' onClick={closeMobleMenu}>
