@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './nav.css';
 import LoginButton from "../LoginBtn";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Profile from "../Profile";
 
 
 function Navbar() {
@@ -21,12 +22,6 @@ function Navbar() {
                <div className="menu-icon" onClick={handleClick}>
                    <i className={click ? 'fas fa-cat' : 'fas fa-bars'} />
                </div>
-               
-               <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                   <li className='nav-item'>                    
-                    <Link to='/' className='nav-links' onClick={closeMobleMenu}>
-                        Home
-                    </Link>
                     <div className="menu-icon" onClick={handleClick}>
                         <i className={click ? 'fas fa-cat' : 'fas fa-bars'} />
                     </div>

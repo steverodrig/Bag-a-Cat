@@ -1,7 +1,6 @@
 import React from 'react';
 import '../App.css';
 import { Button } from './button';
-import Profile from "../component/Profile/index";
 import './splashscreen.css';
 
 function SplashScreen() {
@@ -28,7 +27,6 @@ function SplashScreen() {
           CAT MEMES <i className='far fa-play-circle' />
         </Button>
       </div>
-      <Profile />
     </div>
   );
 }
