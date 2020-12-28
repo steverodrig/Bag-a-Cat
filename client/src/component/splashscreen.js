@@ -27,6 +27,7 @@ function SplashScreen() {
           CAT MEMES <i className='far fa-play-circle' />
         </Button>
       </div>
+      
     </div>
   );
 }

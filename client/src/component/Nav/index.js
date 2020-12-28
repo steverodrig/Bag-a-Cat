@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import './nav.css';
 import LoginButton from "../LoginBtn";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+<<<<<<< HEAD
 import Profile from "../Profile";
+=======
+import Profile from "../Profile"
+>>>>>>> main
 
 
 function Navbar() {
@@ -50,6 +54,7 @@ function Navbar() {
                     </ul>
 
                 </div>
+                
             </nav>
         </>
     );
