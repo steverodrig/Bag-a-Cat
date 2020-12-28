@@ -6,7 +6,9 @@ import Aboutus from "./pages/aboutus"
 import Adopt from "./pages/adopt"
 import Navbar from "../src/component/Nav/index"
 import LearnMore from "./pages/learnMore"
+import Howworks from "./pages/howworks"
 import {  BrowserRouter as Router, Switch,  Route,} from "react-router-dom";
+import Testimonials from "./pages/testimonials";
 
 function App() {
   
@@ -19,6 +21,8 @@ function App() {
           <Route path='/aboutus' component={Aboutus} />
           <Route path='/adopt' component={Adopt} />
           <Route path='/learnMore/:id' component={LearnMore} />
+          <Route path='/howworks' component={Howworks} />
+          <Route path='/testimonials' component={Testimonials} />
         </Switch>
       </Router>
     </>
