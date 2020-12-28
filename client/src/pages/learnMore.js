@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import "../component/learnmore.css"
 import Footer from "../component/footer";
+import Axios from "axios";
 
 
 function LearnMore(props) {
@@ -21,6 +22,15 @@ function LearnMore(props) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    function handleAdoption(event) {
+        event.preventDefault();
+        
+        Axios.put(`/v1/cat/${props.match.params.id}`, {
+            ...cat, 
+            adopted: true
+        })
+    } 
+
     // props will need to be updated with actual data from get request
     return (
         <>
@@ -34,7 +44,7 @@ function LearnMore(props) {
             <div className="learnb-container">
                 <br />
                 <h3>Still interested in me?</h3>
-                <button>Apply to adopt</button>
+                <button onClick={()=>handleAdoption}>Apply to adopt</button>
                     <div className="learnx-container">
                         <h4>Adoption Fee: </h4>
                         <p>   <i class="fas fa-paw"></i> $85</p>
