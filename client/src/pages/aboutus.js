@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { TweenMax, Power3 } from "gsap";
-import "../component/aboutus.css"
+import "../component/aboutus.css";
+import Footer from "../component/footer";
 
 
 
@@ -15,6 +16,7 @@ function Aboutus() {
     
   }, [])
     return (
+      <div>
         <div className="aboutus-container">
            <video src="/video/B-A-C.mp4" autoPlay loop muted />
              <h1 ref={el => {Title = el}}>bag a cat</h1>
@@ -24,6 +26,8 @@ function Aboutus() {
              no sad sarah mcglothlin music, our cats arent sad
              happy cats only
              alothough they still break all your stuff. but hey they are cute</p>
+        </div>
+        <Footer />
         </div>
     )
 }
