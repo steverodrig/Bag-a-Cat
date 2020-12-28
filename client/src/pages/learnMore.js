@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import "../component/learnmore.css"
-
+import Footer from "../component/footer";
 
 function LearnMore(props) {
 
@@ -22,6 +22,7 @@ function LearnMore(props) {
 
 // props will need to be updated with actual data from get request
 return (
+    <div>
   <div className="learn-container">
         <br/>
         <h1>{cat.name}</h1>
@@ -30,6 +31,8 @@ return (
         {cat.description}
   </div>
 
+    <Footer />
+    </div>
 )   
 }
 
