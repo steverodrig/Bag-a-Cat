@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import { TweenMax, Power3 } from "gsap";
-import "../component/aboutus.css"
+import "../component/aboutus.css";
+import Footer from "../component/footer";
+
 
 
 
@@ -15,6 +17,7 @@ function Aboutus() {
     
   }, [])
     return (
+      <>
         <div className="aboutus-container">
            <video src="/video/B-A-C.mp4" autoPlay loop muted />
            <div className="about-wrapper">
@@ -32,8 +35,10 @@ function Aboutus() {
              happy cats only
              alothough they still break all your stuff. but hey they are cute</p>
         </div>
-           </div>
-             
+        
+      </div>
+      <Footer />
+      </>
     )
 }
 

@@ -46,7 +46,7 @@ function Navbar() {
                         <li>
                             <Profile />
                         </li>
-                    </ul>
+                </ul>
 
                 </div>
                 
