@@ -3,7 +3,6 @@ import Footer from "../component/footer";
 
 const fosterLink = "https://sahumane.org/foster-care"
 const foster2Link = "https://www.aspca.org/take-action/volunteer/fosters-needed-across-country"
-const foster3Link = "https://sahumane.org/foster-care"
 
 function Foster() {
     return (

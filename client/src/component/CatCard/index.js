@@ -2,7 +2,7 @@ import React from "react";
 import '../Cards.css';
 //import learnMore from "./pages/learnMore"
 import { Link } from "react-router-dom"
-import {  BrowserRouter as Router, Route,} from "react-router-dom";
+//import {  BrowserRouter as Router, Route,} from "react-router-dom";
 
 
 function CatCard (props) {
