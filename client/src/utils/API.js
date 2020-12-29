@@ -8,5 +8,8 @@ export default {
     },
     getCatDetails: function(id) {
         return axios.get(`/v1/cat/${id}`);
+    },
+    putAdoptedState: function(id) {
+        return axios.put(`/v1/cat/${id}`, {adopted: true});
     }
 };

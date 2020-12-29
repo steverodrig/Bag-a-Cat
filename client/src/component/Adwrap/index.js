@@ -6,8 +6,6 @@ import API from "../../utils/API";
 function Adwrap() {
 
     const [cats, setCats] = useState([]);
-
-   console.log(cats);
     
     function loadCats() {
         API.getCats()
