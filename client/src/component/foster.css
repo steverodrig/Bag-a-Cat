@@ -1,4 +1,4 @@
-.how-works-container {
+.foster-container {
     /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
     height: 100vh;
     width: 100%;
@@ -9,7 +9,7 @@
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     object-fit: contain;
   }
-.how-works-wrapper {
+.foster-wrapper {
     /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
     height: 80vh;
     width: 80%;
@@ -24,83 +24,60 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.9);
   }
   
-  .how-works-wrapper > h1 {
-    color: #fff;
-    font-size: 70px;
-    margin-top: 70px;
+  .foster-wrapper > h3 {
+    color: rgb(126, 112, 112);
+    font-size: 50px;
+   
     
   }
-  .how-works-wrapper > h3 {
-    color: #fff;
-    font-size: 25px;
  
-  }
+ 
   
-  
-  .how-works-wrapper > p {
+  .foster-wrapper > p {
     margin-top: 8px;
-    color: #fff;
-    font-size: 32px;
+    color: rgb(126, 112, 112);
+    font-size: 28px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+  } 
+  .foster-wrapper > a {
+    margin-top: 8px;
+    color: rgb(126, 112, 112);
+    font-size: 28px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
       'Lucida Sans', Arial, sans-serif;
   }
+  a:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    
+  } 
   
- 
+  
+  
+  
 
-  
-  
-  
-  
   @media screen and (max-width: 960px) {
-    .how-works-container > h1 {
-      font-size: 50px;
-      margin-top: -150px;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .how-works-container > h1 {
-      font-size: 50px;
-      margin-top: -100px;
-    }
-  
-    .how-works-container > p {
+    .foster-wrapper > h3 {
       font-size: 30px;
-    }
-  
-    .btn-mobile {
-      display: block;
-      text-decoration: none;
-    }
-  
-    .btn {
-      width: 100%;
-    }
-  }
-
-  @media screen and (max-width: 960px) {
-    .how-works-wrapper > h1 {
-      font-size: 50px;
       margin-top: -150px;
     }
+   
   }
 
   @media screen and (max-width: 768px) {
-    .how-works-wrapper > h3 {
-      font-size: 30px;
+    .foster-wrapper > h3 {
+      font-size: 20px;
      
     }
   
-    .how-works-wrapper > p {
+    .foster-wrapper > p {
+      font-size: 15px;
+    }
+    .foster-wrapper > a {
       font-size: 15px;
     }
   
-    .btn-mobile {
-      display: block;
-      text-decoration: none;
-    }
-  
-    .btn {
-      width: 100%;
-    }
+    
   }
