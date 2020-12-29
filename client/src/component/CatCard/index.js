@@ -2,7 +2,7 @@ import React from "react";
 import '../Cards.css';
 //import learnMore from "./pages/learnMore"
 import { Link } from "react-router-dom"
-import {  BrowserRouter as Router, Route,} from "react-router-dom";
+//import {  BrowserRouter as Router, Route,} from "react-router-dom";
 
 
 function CatCard (props) {
@@ -14,7 +14,7 @@ function CatCard (props) {
           <img
             className='cards__item__img'
             alt='cat'
-            src={"https://picsum.photos/id/1/200/300"}
+            src={props.CatImage}
         />
           </figure>
           <div className='cards__item__info'>

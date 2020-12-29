@@ -1,8 +1,10 @@
 import React from 'react'
 import "../component/testti.css"
+import Footer from "../component/footer";
 
 function Testimonials() {
     return (
+        <>
         <div className="test-container">          
             <section className="test-wrapper">
                                  
@@ -50,6 +52,9 @@ function Testimonials() {
                 
             </section>                       
         </div>
+
+        <Footer />
+        </>
     )
 }
 

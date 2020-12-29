@@ -1,7 +1,7 @@
 .learn-container {
     /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
     height: 100vh;
-    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,4 +41,26 @@
       font-size: 30px;
     }
 }
+
+.learnb-container {
+  /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
+  margin-top: 50px;
+  height: 10vh;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
   
+.learnx-container {
+  /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
+  height: 70vh;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}

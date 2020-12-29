@@ -1,8 +1,14 @@
 import React, { useRef, useEffect } from "react";
 import { TweenMax, Power3 } from "gsap";
+<<<<<<< HEAD
 import "../component/aboutus.css"
 import Footer from "../component/footer"
 import Testimonials from "./testimonials";
+=======
+import "../component/aboutus.css";
+import Footer from "../component/footer";
+
+>>>>>>> main
 
 
 
@@ -34,11 +40,11 @@ function Aboutus() {
              no sad sarah mcglothlin music, our cats arent sad
              happy cats only
              alothough they still break all your stuff. but hey they are cute</p>
-        </div>        
-           </div>
-           <Footer />
-           </>
-             
+        </div>
+        
+      </div>
+      <Footer />
+      </>
     )
 }
 
