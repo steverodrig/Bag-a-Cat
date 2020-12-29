@@ -1,5 +1,6 @@
 import React from 'react'
 import Footer from "../component/footer";
+import "../component/donate.css"
 
 const donateLink = "https://secure.humanesociety.org/site/Donation2?idb=1815610938&df_id=23356&mfc_pref=T&23356.donation=form1&s_src=web_topnav_donate&23356_donation=form1"
 const donate2Link = "https://sahumane.org/donate"
@@ -7,8 +8,8 @@ const donate3Link = "https://secure.aspca.org/donate/ps-gn-p2?ms=MP_PMK_Googlebr
 function Donate() {
     return (
         <>
-        <div className="test-container">          
-            <section className="test-wrapper">
+        <div className="donate-container">          
+            <section className="donate-wrapper">
                                  
             <p>
             Every animal shelter and rescue organization has bills to pay and your generous monetary donation will be gratefully accepted.
@@ -19,11 +20,11 @@ function Donate() {
                 Bag a cat provides all of its critters with food, shelter, veterinary care and luvvv.
                 Here at B-A-C we support other organizations that share similar values.
               Please consider donating to one of these organizations below. Thank you for our adorable demons!
-                 
+               
             </p> 
-            <h1><a href={donateLink}>Donate to Humane Society</a></h1>
-            <h1><a href={donate2Link}>Donate to SA Humane Society</a></h1>
-            <h1><a href={donate3Link}>Donate to thr ASPCA</a></h1>
+            <a href={donateLink}>Donate to Humane Society</a>
+            <a href={donate2Link}>Donate to SA Humane Society</a>
+            <a href={donate3Link}>Donate to thr ASPCA</a>
             </section>                       
         </div>
 
