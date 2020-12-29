@@ -36,7 +36,8 @@ return (
            CatImage={cat.image}
             name={cat.name}
            description={cat.description}
-           catID={cat._id}/>
+           catID={cat._id}
+           adoptPending={cat.adopted}/>
        );
        })}
        </ul>

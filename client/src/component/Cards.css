@@ -62,7 +62,14 @@
     animation-duration: 2s;
   }
   
-  .cards__item__pic-wrap::after {
+  .pending {
+    position: relative;
+    width: 100%;
+    padding-top: 67%;
+    overflow: hidden;
+  }
+
+  .pending::after {
     content: attr(data-category);
     position: absolute;
     bottom: 0;
@@ -72,7 +79,7 @@
     font-size: 12px;
     font-weight: 700;
     color: #fff;
-    background-color: #1f98f4;
+    background-color: #749cbb;
     box-sizing: border-box;
   }
   
