@@ -1,14 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import { TweenMax, Power3 } from "gsap";
-<<<<<<< HEAD
-import "../component/aboutus.css"
-import Footer from "../component/footer"
-import Testimonials from "./testimonials";
-=======
 import "../component/aboutus.css";
 import Footer from "../component/footer";
 
->>>>>>> main
+
 
 
 

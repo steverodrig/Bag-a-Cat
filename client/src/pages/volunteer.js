@@ -1,5 +1,6 @@
 import React from 'react'
 import Footer from "../component/footer";
+import "../component/volunteer.css"
 
 const volunteerLink = "https://sahumane.org/volunteer"
 const volunteer2Link = "https://www.humanesociety.org/volunteer"
@@ -8,8 +9,8 @@ const volunteer3Link = "https://www.aspca.org/take-action/volunteer/volunteer-as
 function Volunteer() {
     return (
         <>
-        <div className="test-container">          
-            <section className="test-wrapper">
+        <div className="volunteer-container">          
+            <section className="volunteer-wrapper">
                                  
             <p>
             Volunteer programs are the heart and soul of Bag a Cat.
@@ -22,9 +23,9 @@ function Volunteer() {
 
                  
             </p> 
-            <h1><a href={volunteerLink}>Volunteer at the SA Humane Society</a></h1>
-            <h1><a href={volunteer2Link}>Volunteer at the Humane Society</a></h1>
-            <h1><a href={volunteer3Link}>Volunteer at the ASPCA</a></h1>
+            <a href={volunteerLink}>Volunteer at the SA Humane Society</a>
+            <a href={volunteer2Link}>Volunteer at the Humane Society</a>
+            <a href={volunteer3Link}>Volunteer at the ASPCA</a>
            
             </section>                       
         </div>
