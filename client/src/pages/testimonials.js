@@ -3,6 +3,8 @@ import "../component/testti.css"
 import Footer from "../component/footer";
 
 function Testimonials() {
+
+
     return (
         <>
         <div className="test-container">          
@@ -56,6 +58,7 @@ function Testimonials() {
         <Footer />
         </>
     )
+    
 }
 
 export default Testimonials
