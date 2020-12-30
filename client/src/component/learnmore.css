@@ -23,6 +23,11 @@
     border-style: solid;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.9);
   }
+  .learn-wrapper:hover {
+    
+    box-shadow:0 16px 32px 0 rgba(148, 133, 138, 0.966);
+  
+}
 
   .learn-wrapper > h1 {
     color: rgb(126, 112, 112);

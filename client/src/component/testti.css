@@ -23,6 +23,12 @@
     border-style: solid;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.9);
   }
+
+  .test-wrapper:hover {
+    
+    box-shadow:0 16px 32px 0 rgba(148, 133, 138, 0.966);
+  
+}
   
   
   .test-wrapper > h3 {

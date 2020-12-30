@@ -1,6 +1,6 @@
 import React from 'react'
 import {useForm} from "react-hook-form";
-import { Button } from '../component/button';
+import Footer from "../component/footer";
 import "../component/careers.css"
 
 function Careers() {
@@ -10,6 +10,7 @@ function Careers() {
         console.log(data);
     }
     return (
+        <>
         <div className ="career-container">
             <div className="career-wrapper">
              <h3>send us your info!!</h3>
@@ -23,20 +24,22 @@ function Careers() {
             name="password"
             ref={({ required: "PASSWORD REQUIRED", minLength: {value: 8, message: "TOO SHORT"}})}
             />
+             {errors.password && <p>{errors.password.message}</p>}
             <input
             className="career-input"
             type="resume"
             placeholder="Resume"
             name="resume"
             />            
-            {errors.password && <p>{errors.password.message}</p>}
-            <Button buttonStyle='btn--outline' type="submit">Apply!!</Button>            
+           
+            <input  className="career-input" type="submit" />         
             </form>
             <p>a member of the B-A-C family will reach out to you</p>
                  
             </div>
         </div>
-      
+        <Footer />
+      </>
         
     )
 }
