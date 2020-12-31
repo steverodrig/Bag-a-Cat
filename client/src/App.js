@@ -11,6 +11,7 @@ import Donate from "./pages/donate"
 import Volunteer from "./pages/volunteer"
 import Foster from "./pages/foster"
 import Careers from "./pages/careers"
+import CatApp from "./pages/catApp"
 import {  BrowserRouter as Router, Switch,  Route,} from "react-router-dom";
 import Testimonials from "./pages/testimonials";
 
@@ -31,6 +32,7 @@ function App() {
           <Route path='/volunteer' component={Volunteer} />
           <Route path='/foster' component={Foster} />
           <Route path='/careers' component={Careers} />
+          <Route path='/catApp/:id' component={CatApp} />
         </Switch>
       </Router>
     </>
