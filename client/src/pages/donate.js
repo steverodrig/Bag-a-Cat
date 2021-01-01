@@ -24,7 +24,7 @@ function Donate() {
             </p> 
             <a href={donateLink}>Donate to Humane Society</a>
             <a href={donate2Link}>Donate to SA Humane Society</a>
-            <a href={donate3Link}>Donate to thr ASPCA</a>
+            <a href={donate3Link}>Donate to the ASPCA</a>
             </section>                       
         </div>
 

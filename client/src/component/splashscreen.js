@@ -4,8 +4,6 @@ import { Button } from './button';
 import { Link } from 'react-router-dom';
 import './splashscreen.css';
 
-const catMemeLink = "imgur.com/search/score?q=cat+memes"
-
 function SplashScreen() {
   return (
     <div className='splash-container'>
@@ -21,14 +19,9 @@ function SplashScreen() {
         >
           <Link to='/adopt'>GET STARTED</Link>
         </Button>
-        <Button
-          className='btns'
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-          onClick={console.log('hey-looser')}
-        >
-          <a href={catMemeLink}>CAT MEMES</a><i className='far fa-play-circle' />
-        </Button>
+        <button className="memeButton">
+          <a href="https://imgur.com/search/score?q=cat+memes">CAT MEMES</a><i className='far fa-play-circle' />
+        </button>
       </div>
       
     </div>
