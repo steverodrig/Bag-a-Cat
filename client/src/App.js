@@ -33,6 +33,7 @@ function App() {
           <Route path='/foster' component={Foster} />
           <Route path='/careers' component={Careers} />
           <Route path='/catApp/:id' component={CatApp} />
+          <Route path= '/catmemes' component={() => {window.location.href = "https://imgur.com/search/score?q=cat+memes"; return null}}/>
         </Switch>
       </Router>
     </>
