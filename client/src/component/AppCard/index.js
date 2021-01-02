@@ -6,12 +6,13 @@ import API from "../../utils/API";
 function AppCard(props) {
 
     function handleApproval() {
-        console.log("approved")
+        
+        console.log("Application approved")
     }
 
     function handleDeny() {
         API.putAdoptedFalse(props.catID)
-            .then(console.log("Application Denied"))
+            .then (console.log("Application denied"))
             .catch(err => console.log(err))
     }
 
