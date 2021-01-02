@@ -5,7 +5,7 @@ const app = express();
 const dB = require ("./models");
 //const db = require ("./models/catApp");
 let Cat = require('./models/Cat');
-let CatApp = require('./models/CatApp');
+let CatApp = require('./models/catApp');
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here

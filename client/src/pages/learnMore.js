@@ -4,7 +4,6 @@ import API from "../utils/API";
 import "../component/learnmore.css"
 import Footer from "../component/footer";
 import { Button } from "../component/button"
-import Axios from "axios";
 import { Link } from 'react-router-dom';
 import {
     TwitterShareButton,
