@@ -12,6 +12,9 @@ export default {
     putAdoptedState: function(id) {
         return axios.put(`/v1/cat/${id}`, {adopted: true});
     },
+    putAdoptedFalse: function(id) {
+        return axios.put(`/v1/cat/${id}`, {adopted: false});
+    },
     getApps: function() {
         return axios.get("/v1/catApps");
     }
