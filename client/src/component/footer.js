@@ -21,14 +21,10 @@ const title = 'GitHub';
 
 function Footer() {
   const { user, isAuthenticated } = useAuth0();
-  const verified = '/testimonials'
+  const verified = '/admin'
   const notVerified = '/errorPage'
   const [rout, setRout] = useState([]);
   const adminUser = "srrodrig.rodriguez@gmail.com"
-
-
-  console.log("admin user is " + adminUser);
-  
 
   function adminVerify() {
 
@@ -74,6 +70,7 @@ function Footer() {
             <Link to='/careers'>Careers</Link>
             <Link to='/'>Investors</Link>
             <Link to='/'>Terms of Service</Link>
+            <Link to={`${rout}`}>Admin</Link>
           </div>
           <div class='footer-link-items'>
             <h2>Contact Us</h2>

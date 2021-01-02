@@ -22,6 +22,7 @@ buttonSize
         //   <Link to='/signin' className='btn-mobile'>
               <button
               className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+              // eslint-disable-next-line no-undef
               onClick={onClick}
               type={type}
               >

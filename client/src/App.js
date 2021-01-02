@@ -13,6 +13,7 @@ import Foster from "./pages/foster"
 import Careers from "./pages/careers"
 import ErrorPage from "./pages/errorPage"
 import CatApp from "./pages/catApp"
+import Admin from "./pages/admin"
 import {  BrowserRouter as Router, Switch,  Route,} from "react-router-dom";
 import Testimonials from "./pages/testimonials";
 
@@ -33,6 +34,7 @@ function App() {
           <Route path='/volunteer' component={Volunteer} />
           <Route path='/foster' component={Foster} />
           <Route path='/careers' component={Careers} />
+          <Route path='/admin' component={Admin} />
           <Route path='/errorPage'component={ErrorPage} />
           <Route path='/catApp/:id' component={CatApp} />
           <Route path= '/catmemes' component={() => {window.location.href = "https://imgur.com/search/score?q=cat+memes"; return null}}/>
