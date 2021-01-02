@@ -31,6 +31,8 @@
     "gsap": "^3.5.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
-    "react-hook-form": "^6.13.1"
+    "react-hook-form": "^6.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-share": "^4.3.1"
   }
 }

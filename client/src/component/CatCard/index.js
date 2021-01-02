@@ -11,17 +11,17 @@ function CatCard(props) {
   function appnd() {
     if (props.adoptPending === true) {
       setClassNm(pending.toString())
-    } else {setClassNm(notPending.toString())}
+    } else { setClassNm(notPending.toString()) }
   }
 
   useEffect(() => {
     appnd()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
     <li className='cards__item'>
-      <Link className='cards__item__link' to={props.path}>
+      <Link className='cards__item__link' >
         <figure id="kitty" className={`${classNm}`} data-category="Adoption Pending Review">
           <img
             className='cards__item__img'
@@ -34,7 +34,6 @@ function CatCard(props) {
           <Link to={`/learnMore/${props.catID}`} className='btn btn-primary'>
             More info
             </Link>
-
         </div>
       </Link>
     </li>
