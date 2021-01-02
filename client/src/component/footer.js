@@ -16,8 +16,8 @@ import {
   PinterestIcon,
 } from "react-share";
 
-const shareUrl = 'http://github.com';
-const title = 'GitHub';
+const shareUrl = 'https://enigmatic-eyrie-23492.herokuapp.com/';
+const title = 'B-A-C';
 
 function Footer() {
   const { user, isAuthenticated } = useAuth0();
