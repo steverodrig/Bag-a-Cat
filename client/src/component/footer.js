@@ -46,9 +46,7 @@ function Footer() {
             <h2>About Us</h2>
             <Link to='/howworks'>How it works</Link>
             <Link to='/testimonials'>Testimonials</Link>
-            <Link to='/careers'>Careers</Link>
-            <Link to='/'>Investors</Link>
-            <Link to='/'>Terms of Service</Link>
+            <Link to='/careers'>Careers</Link>           
           </div>
           <div className='footer-link-items'>
             <h2>Contact Us</h2>
@@ -65,7 +63,11 @@ function Footer() {
             <Link to='/YouTube'>YouTube</Link>
             <Link to='/Cattitude'>Cattitude</Link>           
           </div>
-         
+          <div class='footer-link-items'>
+            <h2>Legal</h2>
+            <Link to='/investors'>Investors</Link>
+            <Link to='/terms'>Terms of Service</Link>
+          </div>
         </div>
       </div>
       <section className='social-media'>

@@ -54,7 +54,7 @@ function LearnMore(props) {
               <div className="learn-wrapper">
               <br />
                 <h1>Hi, I'm {cat.name}</h1>
-                <img alt='cat' src={cat.image} />
+                <img className="cat-img" alt='cat' src={cat.image} />
                 <br />
                 {cat.description}
                 <br />
