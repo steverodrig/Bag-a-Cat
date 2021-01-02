@@ -24,7 +24,7 @@ function Footer() {
   const verified = '/admin'
   const notVerified = '/errorPage'
   const [rout, setRout] = useState([]);
-  const adminUser = "srrodrig.rodriguez@gmail.com"
+  const adminUser = "bagacat9@gmail.com"
 
   function adminVerify() {
 
