@@ -14,6 +14,7 @@ import Careers from "./pages/careers"
 import ErrorPage from "./pages/errorPage"
 import CatApp from "./pages/catApp"
 import Admin from "./pages/admin"
+import Terms from "./pages/terms"
 import {  BrowserRouter as Router, Switch,  Route,} from "react-router-dom";
 import Testimonials from "./pages/testimonials";
 
@@ -37,6 +38,7 @@ function App() {
           <Route path='/admin' component={Admin} />
           <Route path='/errorPage'component={ErrorPage} />
           <Route path='/catApp/:id' component={CatApp} />
+          <Route path='/terms' component={Terms} />
           <Route path= '/catmemes' component={() => {window.location.href = "https://imgur.com/search/score?q=cat+memes"; return null}}/>
           <Route path= '/YouTube' component={() => {window.location.href = "https://www.youtube.com/channel/UCNo5PGwGmfnEprEUUb9AGgw"; return null}}/>
           <Route path= '/Cattitude' component={() => {window.location.href = "https://scratch.mit.edu/projects/404898794/fullscreen/"; return null}}/>
