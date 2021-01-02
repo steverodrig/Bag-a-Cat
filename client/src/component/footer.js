@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../component/footer.css';
 import { Button } from '../component/button';
 import { Link } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
 import {
   TwitterShareButton,
   TwitterIcon,
@@ -16,9 +17,29 @@ import {
 } from "react-share";
 
 const shareUrl = 'http://github.com';
-    const title = 'GitHub';
-    
+const title = 'GitHub';
+
 function Footer() {
+  const { user, isAuthenticated } = useAuth0();
+  const verified = '/admin'
+  const notVerified = '/errorPage'
+  const [rout, setRout] = useState([]);
+  const adminUser = "bagacat9@gmail.com"
+
+  function adminVerify() {
+
+    if (isAuthenticated) {
+      if (user.email.toString() === adminUser.toString()) {
+        setRout(verified.toString())
+      } else { setRout(notVerified.toString()) }
+    } else { setRout(notVerified.toString()) }
+  }
+
+  useEffect(() => {
+    adminVerify()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
@@ -46,7 +67,10 @@ function Footer() {
             <h2>About Us</h2>
             <Link to='/howworks'>How it works</Link>
             <Link to='/testimonials'>Testimonials</Link>
-            <Link to='/careers'>Careers</Link>           
+            <Link to='/careers'>Careers</Link>
+            <Link to='/'>Investors</Link>
+            <Link to='/'>Terms of Service</Link>
+            <Link to={`${rout}`}>Admin</Link>              
           </div>
           <div className='footer-link-items'>
             <h2>Contact Us</h2>
@@ -81,46 +105,46 @@ function Footer() {
           <small className='website-rights'>B-A-C © 2020</small>
           <h2 className='website-rights'> Share B-A-C on Social Media</h2>
           <div>
-          <TwitterShareButton
-            url={shareUrl}
-            title={title}>
-            <TwitterIcon size={32} round />
-          </TwitterShareButton>
-        </div>
+            <TwitterShareButton
+              url={shareUrl}
+              title={title}>
+              <TwitterIcon size={32} round />
+            </TwitterShareButton>
+          </div>
 
-        <div>
-          <FacebookShareButton
-            url={shareUrl}
-            quote={title}>
-            <FacebookIcon size={32} round />
-          </FacebookShareButton>
-        </div>
+          <div>
+            <FacebookShareButton
+              url={shareUrl}
+              quote={title}>
+              <FacebookIcon size={32} round />
+            </FacebookShareButton>
+          </div>
 
-        <div>
-          <RedditShareButton
-            url={shareUrl}
-            title={title}
-            windowWidth={660}
-            windowHeight={460}>
-            <RedditIcon size={32} round />
-          </RedditShareButton>
-        </div>
+          <div>
+            <RedditShareButton
+              url={shareUrl}
+              title={title}
+              windowWidth={660}
+              windowHeight={460}>
+              <RedditIcon size={32} round />
+            </RedditShareButton>
+          </div>
 
-        <div>
-          <LinkedinShareButton url={shareUrl}>
-            <LinkedinIcon size={32} round />
-          </LinkedinShareButton>
-        </div>
+          <div>
+            <LinkedinShareButton url={shareUrl}>
+              <LinkedinIcon size={32} round />
+            </LinkedinShareButton>
+          </div>
 
-        <div>
-          <PinterestShareButton
-            url={String(window.location)}
-            media={`${String(window.location)}`}>
-            <PinterestIcon size={32} round />
-          </PinterestShareButton>
-        </div>
-        
-        <div></div>
+          <div>
+            <PinterestShareButton
+              url={String(window.location)}
+              media={`${String(window.location)}`}>
+              <PinterestIcon size={32} round />
+            </PinterestShareButton>
+          </div>
+
+          <div></div>
         </div>
       </section>
     </div>

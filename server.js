@@ -25,6 +25,13 @@ app.get('/v1/cats',function (req, res) {
       .catch(err => res.status(422).json('Cannot Find Cats: ' + err));
 });
 
+// Finds all applicants
+app.get('/v1/catApps',function (req, res) {
+  CatApp.find()
+      .then(apps => res.json(apps))
+      .catch(err => res.status(422).json('Cannot Find Applications: ' + err));
+});
+
 // Adds new Cat
 app.post('/v1/cat/new',function (req,res) {
   console.log(req.body);
@@ -34,6 +41,7 @@ app.post('/v1/cat/new',function (req,res) {
 
 });
 
+// Adds adoption application contact info
 app.post('/v1/catApp',function (req,res) {
   console.log(req.body);
   CatApp.create(req.body)

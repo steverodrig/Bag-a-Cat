@@ -6,8 +6,6 @@ import API from "../../utils/API";
 function Adwrap() {
 
     const [cats, setCats] = useState([]);
-
-   console.log(cats);
     
     function loadCats() {
         API.getCats()
@@ -38,7 +36,8 @@ return (
            CatImage={cat.image}
             name={cat.name}
            description={cat.description}
-           catID={cat._id}/>
+           catID={cat._id}
+           adoptPending={cat.adopted}/>
        );
        })}
        </ul>
