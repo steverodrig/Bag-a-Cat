@@ -39,10 +39,16 @@ video {
   .splash-btns .btn {
     margin: 6px;
   }
-  
+  .splash-btns .memeButton {
+    margin: 6px;
+    
+  }
+ 
   .fa-play-circle {
     margin-left: 4px;
   }
+
+
   
   @media screen and (max-width: 960px) {
     .splash-container > h1 {
@@ -69,4 +75,5 @@ video {
     .btn {
       width: 100%;
     }
+    
   }

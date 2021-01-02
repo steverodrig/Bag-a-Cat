@@ -6,9 +6,8 @@
 }
 
 .home,
-.aboutus,
-.products,
-.signin {
+.aboutus
+ {
   display: flex;
   height: 90vh;
   align-items: center;
@@ -17,14 +16,6 @@
 }
 
 
-.products {
-  /* background-image: url('/images/img-1.jpg'); */
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
 
 .signin {
   /* background-image: url('/images/img-8.jpg'); */

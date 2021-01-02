@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import "../component/learnmore.css"
 import Footer from "../component/footer";
+import Button from "../component/button"
+import Axios from "axios";
+import { Link } from 'react-router-dom';
 import {
     TwitterShareButton,
     TwitterIcon,
@@ -55,7 +58,7 @@ function LearnMore(props) {
                 {cat.description}
                 <br />
                 <h3>Still interested in me?</h3>
-                <button onClick={()=>handleAdoption}>Apply to adopt</button>                    
+                <Button  buttonStyle='btn--outline' buttonSize='btn--large' onClick={()=>handleAdoption}><Link to={`/catApp/${props.match.params.id}`}>Apply to Adopt</Link></Button>                    
                         <h4>Adoption Fee: </h4>
                         <p>   <i class="fas fa-paw"></i> $85</p>
                         <br />

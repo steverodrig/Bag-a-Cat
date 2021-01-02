@@ -2,8 +2,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes/api/cats");
 const app = express();
-const dB = require ("./models")
+const dB = require ("./models");
+//const db = require ("./models/catApp");
 let Cat = require('./models/Cat');
+let CatApp = require('./models/CatApp');
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here
@@ -27,6 +29,14 @@ app.get('/v1/cats',function (req, res) {
 app.post('/v1/cat/new',function (req,res) {
   console.log(req.body);
   dB.Cat.create(req.body)
+  .then((data) => res.json(data))
+  .catch(err => res.status(422).json('Could not Add: ' + err));
+
+});
+
+app.post('/v1/catApp',function (req,res) {
+  console.log(req.body);
+  CatApp.create(req.body)
   .then((data) => res.json(data))
   .catch(err => res.status(422).json('Could not Add: ' + err));
 
