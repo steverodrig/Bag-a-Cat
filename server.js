@@ -1,6 +1,5 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const routes = require("./routes/api/cats");
 const app = express();
 const dB = require ("./models");
 //const db = require ("./models/catApp");
@@ -16,7 +15,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // Add routes, both API and view
-//app.use(routes);
+
 
 // Finds all Cats
 app.get('/v1/cats',function (req, res) {
