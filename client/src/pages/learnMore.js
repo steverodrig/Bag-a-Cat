@@ -61,7 +61,7 @@ function LearnMore(props) {
                 <h3>Still interested in me?</h3>
                 <Button onClick={()=>handleAdoption}><Link to={`/catApp/${props.match.params.id}`}>Apply to Adopt</Link></Button>                    
                         <h4>Adoption Fee: </h4>
-                        <p>   <i class="fas fa-paw"></i> $85</p>
+                        <p>   <i className="fas fa-paw"></i> $85</p>
                         <br />
                         <br />
                         <h4>The pet adoption fee includes:</h4>
