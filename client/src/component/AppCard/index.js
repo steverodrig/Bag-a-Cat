@@ -1,6 +1,7 @@
 import React from "react";
 import "../Cards.css";
 import { Button } from "../button";
+import API from "../../utils/API";
 
 function AppCard(props) {
 
@@ -9,7 +10,9 @@ function AppCard(props) {
     }
 
     function handleDeny() {
-        console.log("Denied")
+        API.putAdoptedFalse(props.catID)
+            .then(console.log("Application Denied"))
+            .catch(err => console.log(err))
     }
 
     return (
