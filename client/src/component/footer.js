@@ -16,8 +16,8 @@ import {
   PinterestIcon,
 } from "react-share";
 
-const shareUrl = 'http://github.com';
-const title = 'GitHub';
+const shareUrl = 'https://enigmatic-eyrie-23492.herokuapp.com/';
+const title = 'B-A-C';
 
 function Footer() {
   const { user, isAuthenticated } = useAuth0();
@@ -61,9 +61,9 @@ function Footer() {
           </form>
         </div>
       </section>
-      <div class='footer-links'>
+      <div className='footer-links'>
         <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
+          <div className='footer-link-items'>
             <h2>About Us</h2>
             <Link to='/howworks'>How it works</Link>
             <Link to='/testimonials'>Testimonials</Link>
@@ -72,7 +72,7 @@ function Footer() {
             <Link to='/'>Terms of Service</Link>
             <Link to={`${rout}`}>Admin</Link>              
           </div>
-          <div class='footer-link-items'>
+          <div className='footer-link-items'>
             <h2>Contact Us</h2>
             <Link to='/'>Contact</Link>
             <Link to='/'>Support</Link>
@@ -81,7 +81,7 @@ function Footer() {
           </div>
         </div>
         <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
+          <div className='footer-link-items'>
             <h2>Videos</h2>
             <Link to='/'>Submit Video</Link>
             <Link to='/YouTube'>YouTube</Link>
@@ -94,15 +94,16 @@ function Footer() {
           </div>
         </div>
       </div>
-      <section class='social-media'>
-        <div class='social-media-wrap'>
-          <div class='footer-logo'>
+      <section className='social-media'>
+        <div className='social-media-wrap'>
+          <div className='footer-logo'>
             <Link to='/' className='social-logo'>
               B-A-C
-              <i class='fas fa-cat' />
+              <i className='fas fa-cat' />
             </Link>
           </div>
-          <small class='website-rights'>B-A-C © 2020</small>
+          <small className='website-rights'>B-A-C © 2020</small>
+          <h2 className='website-rights'> Share B-A-C on Social Media</h2>
           <div>
             <TwitterShareButton
               url={shareUrl}

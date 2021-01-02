@@ -65,6 +65,22 @@ app.put("/v1/cat/:id",function (req, res){
 
 });
 
+// Finds a Cat by ID and Deletes
+app.delete("/v1/cat/:id",function (req, res){
+  dB.Cat.findByIdAndRemove({ _id: req.params.id },req.body)
+  .then((data) => res.json(data))
+  .catch(err => res.status(422).json('Delete Could Not Occur : ' + err));
+
+});
+
+// Finds a CatAPP by ID and Deletes
+app.delete("/v1/catapp/:id",function (req, res){
+  CatApp.findByIdAndRemove({ _id: req.params.id },req.body)
+  .then((data) => res.json(data))
+  .catch(err => res.status(422).json('Delete Could Not Occur : ' + err));
+
+});
+
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/catlist");
 
