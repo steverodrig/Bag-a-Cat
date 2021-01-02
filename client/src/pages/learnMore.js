@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import "../component/learnmore.css"
-import { Button } from "../component/button"
 import Footer from "../component/footer";
 import {
     TwitterShareButton,
@@ -56,7 +55,7 @@ function LearnMore(props) {
                 {cat.description}
                 <br />
                 <h3>Still interested in me?</h3>
-                <Button onClick={()=>handleAdoption}>Apply to adopt</Button>                    
+                <button onClick={()=>handleAdoption}>Apply to adopt</button>                    
                         <h4>Adoption Fee: </h4>
                         <p>   <i class="fas fa-paw"></i> $85</p>
                         <br />
