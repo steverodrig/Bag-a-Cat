@@ -32,7 +32,7 @@ function CatCard(props) {
         <div className='cards__item__info'>
           <h5 className='cards__item__text'>{props.name}</h5>
           <br></br>
-          <h7 className='cards__item__text'>Type: {props.breed}</h7>
+          <h5 className='cards__item__text'>Breed: <i className="fas fa-paw"></i> {props.breed}</h5>
         </div>
       </Link>
    </li>

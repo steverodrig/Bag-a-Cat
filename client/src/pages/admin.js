@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AppCard from "../component/AppCard";
 import API from "../utils/API";
+import { Link } from "react-router-dom"
 import "../component/Cards.css"
 
 function Admin() {
@@ -22,6 +23,7 @@ function Admin() {
     return (
     <>
     <h1>Admin page</h1>
+    <Link to={`/catpost`}>Add a cat for adoption.</Link>
     <div className='cards__container'>
         <div className='cards__wrapper'>
 
