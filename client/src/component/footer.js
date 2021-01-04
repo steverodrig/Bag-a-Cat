@@ -38,7 +38,7 @@ function Footer() {
   useEffect(() => {
     adminVerify()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [isAuthenticated])
 
   return (
     <div className='footer-container'>

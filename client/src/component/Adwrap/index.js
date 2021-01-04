@@ -35,6 +35,7 @@ return (
            CatImage={cat.image}
            name={cat.name}
            breed={cat.breed}
+           age={cat.age}
            description={cat.description}
            catID={cat._id}
            adoptPending={cat.adopted}

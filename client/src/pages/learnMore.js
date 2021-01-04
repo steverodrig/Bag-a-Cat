@@ -54,7 +54,9 @@ function LearnMore(props) {
                 <h1>Hi, I'm {cat.name}</h1>
                 <img className="cat-img" alt='cat' src={cat.image} />
                 <br />
-                {cat.description}
+                <p>{cat.description}</p>
+                <p>I'm a {cat.age} year old {cat.breed} and I can't wait to feel your cuddles...when I want them.</p>
+                <p></p>
                 <br />
                 <h3>Still interested in me?</h3>
                 <Button  buttonStyle='btn--outline' buttonSize='btn--large' onClick={()=>handleAdoption()}><Link to={`/catApp/${props.match.params.id}`}>Apply to Adopt</Link></Button>                   
