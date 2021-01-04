@@ -20,19 +20,19 @@ class Catpost extends Component {
     }
 
     changeHandler = (e) => {
-        this.setState({[e.target.name]: e.target.value})
+        this.setState({ [e.target.name]: e.target.value })
     }
 
     submitHandler = e => {
         e.preventDefault()
         console.log(this.state)
-        Axios.post("/v1/cat/new",this.state)
-        .then(res => {
-            alert("New adoption card has been submitted.");
-        })
-        .catch(err => {
-            console.log(err)
-        })
+        Axios.post("/v1/cat/new", this.state)
+            .then(res => {
+                alert("New adoption card has been submitted.");
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }
 
     render() {
