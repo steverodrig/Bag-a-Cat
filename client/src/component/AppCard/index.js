@@ -1,7 +1,8 @@
 import React from "react";
-import "../Cards.css";
-import { Button } from "../button";
+import "../admin.css"
 import API from "../../utils/API";
+import { Button } from "../button";
+
 
 function AppCard(props) {
 
@@ -23,17 +24,19 @@ function AppCard(props) {
             .catch(err => console.log(err))
     }
 
+    
+
     return (
-        <li>
-            <div>
-                <p>Cat ID: {props.catID}</p>
-                <p>Applicant info:</p>
-                <p>name - {props.name}</p>
-                <p>email - {props.email}</p>
-                <p>phone # - {props.phone}</p>
-            </div>
-            <Button buttonSize='btn--medium' onClick={()=>handleApproval()}>Approve</Button>
-            <Button buttonSize='btn--medium' onClick={()=>handleDeny()}>Deny</Button>
+        <li className= "admin__item">
+            <div className="admin__item__info">
+                <p className= 'cards__item__text'>Cat ID: {props.catID}</p>
+                <p className= 'cards__item__text'>Applicant info:</p>
+                <p className= 'cards__item__text'>name - {props.name}</p>
+                <p className= 'cards__item__text'>email - {props.email}</p>
+                <p className= 'cards__item__text'>phone # - {props.phone}</p>
+                <Button buttonStyle='btn--outline' buttonSize='btn--medium' onClick={()=>handleApproval()}>Approve</Button>
+                <Button buttonStyle='btn--outline' buttonSize='btn--medium' onClick={()=>handleDeny()}>Deny</Button>
+            </div>          
         </li>
     )
 

@@ -67,17 +67,14 @@ function Footer() {
             <h2>About Us</h2>
             <Link to='/howworks'>How it works</Link>
             <Link to='/testimonials'>Testimonials</Link>
-            <Link to='/careers'>Careers</Link>
-            <Link to='/'>Investors</Link>
-            <Link to='/'>Terms of Service</Link>
+            <Link to='/careers'>Careers</Link>           
             <Link to={`${rout}`}>Admin</Link>              
           </div>
           <div className='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Locations</Link>
-            <Link to='/'>Sponsorships</Link>
+            <Link to='/contact'>Contact</Link>
+            <Link to='/support'>Support</Link>
+            <Link to='/locations'>Locations</Link>           
           </div>
         </div>
         <div className='footer-link-wrapper'>
@@ -89,8 +86,7 @@ function Footer() {
           </div>
           <div className='footer-link-items'>
             <h2>Legal</h2>
-            <Link to='/investors'>Investors</Link>
-            <Link to='/terms'>Terms of Service</Link>
+            <Link to='/investors'>Investors</Link>           
           </div>
         </div>
       </div>
