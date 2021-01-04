@@ -15,8 +15,8 @@
     height: 100vh;
     width: 40%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: left;
     float: left;
     align-items: center;
     flex-wrap: wrap;
@@ -33,13 +33,15 @@
   }
   .ourInfo-container > h3 {
     color: rgb(126, 112, 112);
-    font-size: 30px;  
+    font-size: 30px;
+    text-align: center;  
     
   }
   .ourInfo-container > ul {
     margin-top: 8px;
     color: rgb(126, 112, 112);
     font-size: 20px;
+    text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
       'Lucida Sans', Arial, sans-serif;
   } 
