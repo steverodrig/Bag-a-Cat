@@ -116,6 +116,14 @@
     font-size: 18px;
     line-height: 24px;
   }
+
+  .approved {
+    background-color: green;
+  }
+
+  .denied {
+    background-color: red;
+  }
   
   @media only screen and (min-width: 1200px) {
     .content__blog__container {

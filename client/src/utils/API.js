@@ -17,5 +17,11 @@ export default {
     },
     getApps: function() {
         return axios.get("/v1/catApps");
+    },
+    deleteCats: function(id) {
+        return axios.delete(`/v1/cat/${id}`)
+    },
+    deleteApplication: function(id) {
+        return axios.delete(`/v1/catApp/${id}`)
     }
 };

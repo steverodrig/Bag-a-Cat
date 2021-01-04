@@ -74,7 +74,7 @@ app.delete("/v1/cat/:id",function (req, res){
 });
 
 // Finds a CatAPP by ID and Deletes
-app.delete("/v1/catapp/:id",function (req, res){
+app.delete("/v1/catApp/:id",function (req, res){
   CatApp.findByIdAndRemove({ _id: req.params.id },req.body)
   .then((data) => res.json(data))
   .catch(err => res.status(422).json('Delete Could Not Occur : ' + err));

@@ -14,6 +14,7 @@ import Careers from "./pages/careers"
 import ErrorPage from "./pages/errorPage"
 import CatApp from "./pages/catApp"
 import Admin from "./pages/admin"
+import Catpost from "./pages/catpost"
 import Contact from "./pages/contact"
 import Support from "./pages/support"
 import Locations from "./pages/locations"
@@ -45,7 +46,8 @@ function App() {
           <Route path='/investors' component={Investors} />
           <Route path='/contact' component={Contact} />
           <Route path='/support' component={Support} />
-          <Route path='/locations' component={Locations} />       
+          <Route path='/locations' component={Locations} /> 
+          <Route path='/catpost'  component={Catpost} />  
           <Route path= '/catmemes' component={() => {window.location.href = "https://imgur.com/search/score?q=cat+memes"; return null}}/>
           <Route path= '/YouTube' component={() => {window.location.href = "https://www.youtube.com/channel/UCNo5PGwGmfnEprEUUb9AGgw"; return null}}/>
           <Route path= '/Cattitude' component={() => {window.location.href = "https://scratch.mit.edu/projects/404898794/fullscreen/"; return null}}/>

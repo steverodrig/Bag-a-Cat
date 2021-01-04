@@ -38,7 +38,7 @@ function Footer() {
   useEffect(() => {
     adminVerify()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [isAuthenticated])
 
   return (
     <div className='footer-container'>
@@ -84,7 +84,7 @@ function Footer() {
             <Link to='/YouTube'>YouTube</Link>
             <Link to='/Cattitude'>Cattitude</Link>           
           </div>
-          <div class='footer-link-items'>
+          <div className='footer-link-items'>
             <h2>Legal</h2>
             <Link to='/investors'>Investors</Link>           
           </div>
