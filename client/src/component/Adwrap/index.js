@@ -20,7 +20,6 @@ function Adwrap() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-// props will need to be updated with actual data from get request
 return (
   <div className='cards'>   
    <h1>Check out these EPIC Kitty Cats!</h1>
@@ -31,13 +30,16 @@ return (
                // <>
        <ul className='cards__items'>
            {cats.map(cat => {
-           return (
+           return ( 
            <CatCard 
            CatImage={cat.image}
-            name={cat.name}
+           name={cat.name}
+           breed={cat.breed}
            description={cat.description}
            catID={cat._id}
-           adoptPending={cat.adopted}/>
+           adoptPending={cat.adopted}
+           key={cat._id}
+           />
        );
        })}
        </ul>

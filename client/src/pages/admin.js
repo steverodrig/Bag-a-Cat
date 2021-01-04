@@ -30,6 +30,7 @@ function Admin() {
                     {apps.map(app => {
                         return (
                             <AppCard 
+                                id={app._id}
                                 catID={app.catID}
                                 name={app.name}
                                 email={app.email}

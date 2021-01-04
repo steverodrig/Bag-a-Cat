@@ -21,7 +21,7 @@ function CatCard(props) {
 
   return (
     <li className='cards__item'>
-      <Link className='cards__item__link' >
+      <Link to={`/learnMore/${props.catID}`} className='cards__item__link' >
         <figure id="kitty" className={`${classNm}`} data-category="Adoption Pending Review">
           <img
             className='cards__item__img'
@@ -31,12 +31,11 @@ function CatCard(props) {
         </figure>
         <div className='cards__item__info'>
           <h5 className='cards__item__text'>{props.name}</h5>
-          <Link to={`/learnMore/${props.catID}`} className='btn btn-primary'>
-            More info
-            </Link>
+          <br></br>
+          <h7 className='cards__item__text'>Type: {props.breed}</h7>
         </div>
       </Link>
-    </li>
+   </li>
   )
 }
 
