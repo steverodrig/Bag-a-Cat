@@ -1,6 +1,6 @@
 import React from 'react'
 import {useForm} from "react-hook-form";
-
+import Footer from '../component/footer'
 import '../component/contact.css'
 
 function Contact() {
@@ -27,8 +27,15 @@ function Contact() {
                 <ul>12345 wuka street San Antonio, Texas</ul>
             </div>
         </aside>
+        <div className='footer-div'>
+        <Footer />
+        </div>
+        
+        
+        
        
          </>
+         
     )
 }
 
