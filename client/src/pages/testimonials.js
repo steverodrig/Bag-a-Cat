@@ -8,16 +8,14 @@ function Testimonials() {
     return (
         <>
         <div className="test-container">          
-            <section className="test-wrapper">
-                                 
+            <section className="test-wrapper">                                
                     <h3>Loki, formerly named hiddlesten</h3>                    
                     <p>His new mom, Julia, writes, “We adopted Loki two years ago.
                          He had been in the shelter for months, returned twice, and he had so many allergies. 
                          Their loss was our gain. He is the best boy. So sweet and kind, and while he gets anxious around new people sometimes,
                           he’s teachable and adjusts so well. My kids love him, everyone who meets him loves him, and he has mastered the art of looking
                            pathetic to gain lap access. I encourage everyone who adopts to give it time for families and dogs to adjust – it’s so worth it.
-                            Loki was the perfect addition to our family and we wouldn’t be the same without him.”</p>
-                            
+                            Loki was the perfect addition to our family and we wouldn’t be the same without him.”</p>                            
                     </section> 
                     <section className="test-wrapper">
                     <h3>Liesl, formerly named Heidi</h3>                   

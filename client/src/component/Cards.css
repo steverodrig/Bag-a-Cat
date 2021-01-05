@@ -1,10 +1,11 @@
 .cards {
     padding: 4rem;
-    background: #fff;
+    background: rgb(228, 208, 208);
   }
   
   h1 {
     text-align: center;
+    color:rgb(83, 65, 71);
   }
   
   .cards__container {
@@ -41,6 +42,10 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.9);
     margin-bottom: 24px;
+  }
+
+  .cards__item:hover {
+    box-shadow:0 16px 32px 0 rgba(103, 151, 151, 0.966);
   }
   
   .cards__item__link {
