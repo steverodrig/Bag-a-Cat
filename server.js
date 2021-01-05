@@ -12,6 +12,7 @@ const s3 = new AWS.S3({
   accessKeyId: keys.s3key,
   secretAccessKey: keys.s3secret
 });
+let locLink = [];
 
 const PORT = process.env.PORT || 3001;
 
@@ -39,10 +40,11 @@ app.get('/v1/catApps',function (req, res) {
       .catch(err => res.status(422).json('Cannot Find Applications: ' + err));
 });
 
+const image = locLink[0];
 // Adds new Cat
-app.post('/v1/cat/new',function (req,res) {
+app.post('/v1/cat/new', function (req,res) {
   console.log(req.body);
-  dB.Cat.create(req.body)
+  dB.Cat.create(req.body, {image: image})
   .then((data) => res.json(data))
   .catch(err => res.status(422).json('Could not Add: ' + err));
 
@@ -118,7 +120,11 @@ app.post("/upload", async (req, res) => {
     s3.upload(params, (err, response) => {
         if (err) throw err;
     
+        locLink.push(response.Location);
+
         console.log(`File uploaded successfully at ${response.Location}`);
+
+
         // terminating the req/res cycle by sending a JSON object with the uploaded
         // file path AND any date sent along with the upload... this is where you 
         // could write to your db if needed, now that you have the url path for the

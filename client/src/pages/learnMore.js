@@ -53,7 +53,8 @@ function LearnMore(props) {
           <br />
           <h1>Hi, I'm {cat.name}</h1>
           <img className="cat-img" alt='cat' src={cat.image} />
-          <br />         
+          <br />
+          <p>{cat.description}</p>         
           <p>I'm a {cat.age} year old {cat.breed} and I can't wait to feel your cuddles...when I want them.</p>
           <br />
           <h3>Still interested in me?</h3>

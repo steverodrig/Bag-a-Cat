@@ -37,7 +37,7 @@ function Admin() {
                 buttonStyle='btn--primary'
                 buttonSize='btn--medium'
                  >
-                 <Link className='admin__item__info' to={`/catpost`}>Add a cat for adoption.</Link> 
+                 <Link className='admin__item__info' to={`/catpost`}>Add a cat for adoption</Link> 
                 </Button>
                 
                 
