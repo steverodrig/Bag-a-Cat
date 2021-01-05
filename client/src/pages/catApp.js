@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Axios from "axios";
 import Footer from "../component/footer";
 import "../component/application.css"
+import { Link } from "react-router-dom"
 import { Button } from '../component/button';
 
 class CatApp extends Component {
@@ -27,7 +28,7 @@ class CatApp extends Component {
         Axios.post("/v1/catApp",this.state)
         .then(res => {
             alert("Thank You, Your contact information has been submitted.")
-            this.props.history.push(`/learnMore/${this.state.catID}`);
+            this.props.history.push(`/adopt`);
         })
         .catch(err => {
             console.log(err)
