@@ -10,7 +10,7 @@ function Donate() {
         <>
         <div className="donate-container">          
             <section className="donate-wrapper">
-                                 
+            <image src="/images/catboxing8p11.png" />                    
             <p>
             Every animal shelter and rescue organization has bills to pay and your generous monetary donation will be gratefully accepted.
              Donations may be used to help cover the costs of daily operations, supplies, staff training, animal housing upgrades, community outreach programs, animal enrichment and much more.
