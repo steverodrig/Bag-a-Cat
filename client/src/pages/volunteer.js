@@ -23,9 +23,9 @@ function Volunteer() {
 
                  
             </p> 
-            <a href={volunteerLink}>Volunteer at the SA Humane Society</a>
-            <a href={volunteer2Link}>Volunteer at the Humane Society</a>
-            <a href={volunteer3Link}>Volunteer at the ASPCA</a>
+            <a href={volunteerLink} target="blank">Volunteer at the SA Humane Society</a>
+            <a href={volunteer2Link} target="blank">Volunteer at the Humane Society</a>
+            <a href={volunteer3Link} target="blank">Volunteer at the ASPCA</a>
            
             </section>                       
         </div>

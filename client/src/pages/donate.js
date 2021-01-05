@@ -22,9 +22,9 @@ function Donate() {
               Please consider donating to one of these organizations below. Thank you for our adorable demons!
                
             </p> 
-            <a href={donateLink}>Donate to Humane Society</a>
-            <a href={donate2Link}>Donate to SA Humane Society</a>
-            <a href={donate3Link}>Donate to the ASPCA</a>
+            <a href={donateLink} target="blank">Donate to Humane Society</a>
+            <a href={donate2Link} target="blank">Donate to SA Humane Society</a>
+            <a href={donate3Link} target="blank">Donate to the ASPCA</a>
             </section>                       
         </div>
 

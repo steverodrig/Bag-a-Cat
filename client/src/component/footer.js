@@ -81,8 +81,8 @@ function Footer() {
           <div className='footer-link-items'>
             <h2>Videos</h2>
             <Link to='/'>Submit Video</Link>
-            <Link to='/YouTube'>YouTube</Link>
-            <Link to='/Cattitude'>Cattitude</Link>           
+            <Link to='/YouTube' target="blank">YouTube</Link>
+            <Link to='/Cattitude' target="blank">Cattitude</Link>           
           </div>
           <div className='footer-link-items'>
             <h2>Legal</h2>

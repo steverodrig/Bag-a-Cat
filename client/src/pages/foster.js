@@ -18,8 +18,8 @@ function Foster() {
              a shelter animal is a rewarding experience, but requires hard work and dedication. Here at B-A-C we support other organizations that share similar values.
              If you are interested, please consider opening your home to one of these organizations.                 
             </p> 
-            <a href={fosterLink}>Foster With the SA Humane Society</a>
-            <a href={foster2Link}>Foster With the ASPCA</a>
+            <a href={fosterLink} target="blank">Foster With the SA Humane Society</a>
+            <a href={foster2Link} target="blank">Foster With the ASPCA</a>
            
             </section>                       
         </div>
