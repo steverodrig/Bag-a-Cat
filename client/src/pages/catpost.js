@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Axios from "axios";
 import Footer from "../component/footer";
+import API from "../utils/API";
 import "../component/application.css"
 import { Button } from '../component/button';
 
@@ -10,7 +11,7 @@ class Catpost extends Component {
         name: " ",
         breed: " ",
         description: " ",
-        image: " ",
+        // image: " ",
         age: " ",
         adopted: false
     }
@@ -26,7 +27,7 @@ class Catpost extends Component {
     submitHandler = e => {
         e.preventDefault()
         console.log(this.state)
-        Axios.post("/v1/cat/new", this.state)
+        API.postCats(this.state)
             .then(res => {
                 alert("New adoption card has been submitted.");
             })
@@ -37,7 +38,7 @@ class Catpost extends Component {
 
     render() {
 
-        const { name, breed, description, age, image } = this.state
+        const { name, breed, description, age, /*image*/ } = this.state
         return (
             <>
                 <div className="app-container">
@@ -60,9 +61,9 @@ class Catpost extends Component {
                             <label>Description: </label>
                             <input className='app-input' name="description" value={description} onChange={this.changeHandler} />
                         </div>
-                        <div>
+                        {/* <div>
 
-                        </div>
+                        </div> */}
                         <Button buttonSize='btn--medium' buttonStyle='btn--outline' type="submit">Submit</Button>
                     </form>
                 </div>
