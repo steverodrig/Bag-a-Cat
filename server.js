@@ -41,11 +41,18 @@ app.get('/v1/catApps',function (req, res) {
       .catch(err => res.status(422).json('Cannot Find Applications: ' + err));
 });
 
-const image = locLink[0];
 // Adds new Cat
 app.post('/v1/cat/new', function (req,res) {
+  const load = {
+    name: req.body.name,
+    breed: req.body.breed,
+    image: locLink[0],
+    description: req.body.description,
+    age: req.body.age,
+    adopted: req.body.adopted
+  }
   console.log("form info " + req.body);
-  dB.Cat.create(req.body)
+  dB.Cat.create(load)
   .then((data) => res.json(data))
   .catch(err => res.status(422).json('Could not Add: ' + err));
 

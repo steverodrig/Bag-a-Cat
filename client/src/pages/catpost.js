@@ -11,9 +11,9 @@ class Catpost extends Component {
     state = {
         name: " ",
         breed: " ",
-        description: " ",
         age: " ",
-        // image: " ",
+        image: "holder",
+        description: " ",
         adopted: false
     }
 
@@ -30,8 +30,8 @@ class Catpost extends Component {
         console.log(this.state)
         API.postCats(this.state)
             .then(res => {
-                alert("New adoption card has been submitted.");
-                
+                alert("New adoption card has been submitted.")
+                this.props.history.push(`/admin`);
             })
             .catch(err => {
                 console.log(err)
