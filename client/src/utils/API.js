@@ -23,5 +23,8 @@ export default {
     },
     deleteApplication: function(id) {
         return axios.delete(`/v1/catApp/${id}`)
+    },
+    postCats: function (catData) {
+        return axios.post('/v1/cat/new', catData);
     }
 };

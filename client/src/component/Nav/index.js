@@ -12,15 +12,14 @@ function Navbar() {
 
     return (
         <>
-        <nav className="navbar">
-            <div className="navbar-container">               
-               <Link to="/" className="navbar-logo" onClick={closeMobleMenu}>
-               <FontAwesomeIcon icon="cat" />
-                  B-A-C                  
-               </Link> 
-               <div className="menu-icon" onClick={handleClick}>
-                   <i className={click ? 'fas fa-cat' : 'fas fa-bars'} />
-               </div>
+            <nav className="navbar">
+                <div className="navbar-container">
+                    <Link to="/" className="navbar-logo" onClick={closeMobleMenu}>
+                        <FontAwesomeIcon icon="cat" /> B-A-C    
+                    </Link>
+                    <div className="menu-icon" onClick={handleClick}>
+                        <i className={click ? 'fas fa-cat' : 'fas fa-bars'} />
+                    </div>
                     <div className="menu-icon" onClick={handleClick}>
                         <i className={click ? 'fas fa-cat' : 'fas fa-bars'} />
                     </div>
@@ -46,14 +45,11 @@ function Navbar() {
                         <li>
                             <Profile />
                         </li>
-                </ul>
-
+                    </ul>
                 </div>
-                
             </nav>
         </>
     );
 }
-
 
 export default Navbar;
