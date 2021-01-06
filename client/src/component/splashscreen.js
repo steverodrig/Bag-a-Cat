@@ -4,15 +4,13 @@ import { Button } from './button';
 import { Link } from 'react-router-dom';
 import './splashscreen.css';
 
-
-
 function SplashScreen() {
   return (
     <div className='splash-container'>
       <video src="/video/B-A-C.mp4" autoPlay loop muted />
       <h1>BAG A CAT</h1>
-      <p>like having a mini velociraptor</p>
-               <p>in your home</p>
+      <p>And take home your very own</p>
+      <p>mini velociraptor</p>
       <div className='splash-btns'>
         <Button
           className='btns'
@@ -22,10 +20,9 @@ function SplashScreen() {
           <Link to='/adopt'>GET STARTED</Link>
         </Button>
         <Button className="memeButton" buttonSize='btn--large'>
-          <Link to= '/catmemes'>CAT MEMES</Link><i className='far fa-play-circle' />
+          <Link to='/catmemes' target="blank">CAT MEMES</Link><i className='far fa-play-circle' />
         </Button>
       </div>
-      
     </div>
   );
 }

@@ -67,26 +67,26 @@ function Footer() {
             <h2>About Us</h2>
             <Link to='/howworks'>How it works</Link>
             <Link to='/testimonials'>Testimonials</Link>
-            <Link to='/careers'>Careers</Link>           
-            <Link to={`${rout}`}>Admin</Link>              
+            <Link to='/careers'>Careers</Link>
+            <Link to={`${rout}`}>Admin</Link>
           </div>
           <div className='footer-link-items'>
             <h2>Contact Us</h2>
             <Link to='/contact'>Contact</Link>
             <Link to='/support'>Support</Link>
-            <Link to='/locations'>Locations</Link>           
+            <Link to='/locations'>Locations</Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>Videos</h2>
             <Link to='/'>Submit Video</Link>
-            <Link to='/YouTube'>YouTube</Link>
-            <Link to='/Cattitude'>Cattitude</Link>           
+            <Link to='/YouTube' target="blank">YouTube</Link>
+            <Link to='/Cattitude' target="blank">Cattitude</Link>
           </div>
           <div className='footer-link-items'>
             <h2>Legal</h2>
-            <Link to='/investors'>Investors</Link>           
+            <Link to='/investors'>Investors</Link>
           </div>
         </div>
       </div>
