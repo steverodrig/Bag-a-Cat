@@ -13,6 +13,7 @@ function Careers() {
         <>
         <div className ="career-container">
             <div className="career-wrapper">
+                <h1>careers with B-A-C</h1>
              <h3>send us your info!!</h3>
             
              <form onSubmit={handleSubmit(onSubmit)}>
