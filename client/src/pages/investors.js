@@ -1,11 +1,14 @@
 import React from 'react'
 import Footer from '../component/footer'
+import '../component/investor.css'
+
 
 function Investors() {
     return (
         <>
         <div className= 'investors-container'>
-            <section>
+            <section className="investor-wrapper">
+
             <p>da bois were appointed the director of Cat Care Services 
                 in September 2016. As director, they were responsible for promoting and protecting
                  the health, safety and welfare of the residents and cats of San Antonio through
@@ -21,9 +24,10 @@ function Investors() {
                      in 2011. These changes have fueled the department’s live release rate from 32 percent
                      to 90 percent. Prior to joining the City of San Antonio, they served as  interns at the
                       Mayor’s Office at the City of Whoville, as well as the City Manager’s Office in Halloween town.</p>
-            </section> 
+            </section>
+            </div> 
             <Footer />         
-        </div>
+        
 
         </>
     )
