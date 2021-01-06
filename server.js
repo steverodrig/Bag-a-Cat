@@ -1,14 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const dB = require ("./models");
+const dB = require("./models");
 //const db = require ("./models/catApp");
 let Cat = require('./models/Cat');
 let CatApp = require('./models/catApp');
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+  extended: true
+}));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -18,73 +20,110 @@ if (process.env.NODE_ENV === "production") {
 
 
 // Finds all Cats
-app.get('/v1/cats',function (req, res) {
+app.get('/v1/cats', function (req, res) {
   dB.Cat.find()
-      .then(cats => res.json(cats))
-      .catch(err => res.status(422).json('Cannot Find Cats: ' + err));
+    .then(cats => res.json(cats))
+    .catch(err => res.status(422).json('Cannot Find Cats: ' + err));
 });
 
 // Finds all applicants
-app.get('/v1/catApps',function (req, res) {
+app.get('/v1/catApps', function (req, res) {
   CatApp.find()
-      .then(apps => res.json(apps))
-      .catch(err => res.status(422).json('Cannot Find Applications: ' + err));
+    .then(apps => res.json(apps))
+    .catch(err => res.status(422).json('Cannot Find Applications: ' + err));
 });
 
 // Adds new Cat
-app.post('/v1/cat/new',function (req,res) {
+app.post('/v1/cat/new', function (req, res) {
   console.log(req.body);
   dB.Cat.create(req.body)
-  .then((data) => res.json(data))
-  .catch(err => res.status(422).json('Could not Add: ' + err));
+    .then((data) => res.json(data))
+    .catch(err => res.status(422).json('Could not Add: ' + err));
 
 });
 
 // Adds adoption application contact info
-app.post('/v1/catApp',function (req,res) {
+app.post('/v1/catApp', function (req, res) {
   console.log(req.body);
   CatApp.create(req.body)
-  .then((data) => res.json(data))
-  .catch(err => res.status(422).json('Could not Add: ' + err));
+    .then((data) => res.json(data))
+    .catch(err => res.status(422).json('Could not Add: ' + err));
 
 });
 
 // Find Cat by ID
-app.get('/v1/cat/:id',function (req,res) {
-  dB.Cat.findById({_id: req.params.id})
-  .then((data) => res.json(data))
-  .catch(err => res.status(422).json('Cant find Cat: ' + err));
+app.get('/v1/cat/:id', function (req, res) {
+  dB.Cat.findById({
+      _id: req.params.id
+    })
+    .then((data) => res.json(data))
+    .catch(err => res.status(422).json('Cant find Cat: ' + err));
 
 });
 
 // Finds a Cat by ID and Updates
-app.put("/v1/cat/:id",function (req, res){
-  dB.Cat.findByIdAndUpdate({ _id: req.params.id },req.body)
-  .then((data) => res.json(data))
-  .catch(err => res.status(422).json('Update Could Not Occur : ' + err));
+app.put("/v1/cat/:id", function (req, res) {
+  dB.Cat.findByIdAndUpdate({
+      _id: req.params.id
+    }, req.body)
+    .then((data) => res.json(data))
+    .catch(err => res.status(422).json('Update Could Not Occur : ' + err));
 
 });
 
 // Finds a Cat by ID and Deletes
-app.delete("/v1/cat/:id",function (req, res){
-  dB.Cat.findByIdAndRemove({ _id: req.params.id },req.body)
-  .then((data) => res.json(data))
-  .catch(err => res.status(422).json('Delete Could Not Occur : ' + err));
+app.delete("/v1/cat/:id", function (req, res) {
+  dB.Cat.findByIdAndRemove({
+      _id: req.params.id
+    }, req.body)
+    .then((data) => res.json(data))
+    .catch(err => res.status(422).json('Delete Could Not Occur : ' + err));
 
 });
 
 // Finds a CatAPP by ID and Deletes
-app.delete("/v1/catApp/:id",function (req, res){
-  CatApp.findByIdAndRemove({ _id: req.params.id },req.body)
-  .then((data) => res.json(data))
-  .catch(err => res.status(422).json('Delete Could Not Occur : ' + err));
+app.delete("/v1/catApp/:id", function (req, res) {
+  CatApp.findByIdAndRemove({
+      _id: req.params.id
+    }, req.body)
+    .then((data) => res.json(data))
+    .catch(err => res.status(422).json('Delete Could Not Occur : ' + err));
 
 });
+
+//finds cats by breed
+app.get('/v1/settings/breed', function (req, res) {
+  dB.Cat.aggregate([{
+    $match:
+      (req.body)
+    
+        // $group: {
+        //   _id: 0,
+        //     breed: { $addToSet: '$breed'},
+        //   name: { $addToSet: '$name'}
+        
+        // }
+      }
+
+    ])
+   //console.log(req.body)
+  // dB.Cat.distinct('breed')
+    .then((data) => res.json(data))
+    .catch(err => res.status(422).json(' Could not find breed ' + err));
+});
+
+app.get("/v1/catbreed", function (req, res) {
+  dB.Cat.find(req.body)
+    .then((data) => res.json(data))
+    .catch(err => res.status(422).json('Could not find breed : ' + err));
+
+});
+
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/catlist");
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
