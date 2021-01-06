@@ -14,7 +14,6 @@ async function generateData() {
     const breeds = ["Balinese", "American Shorthair", "American Wirehair", "Birman", "Burmese", "Siamese", "Chartreux", "Himalayan", "Maine Coon", "Persian", "Russian Blue", "Ragdoll", "British Shorthair", "Sphynx Cat"]
     const age = [.5, 1, 2, 3, 4, 5, 6, 7];
 
-
     for (let i = 0; i < 40; i++) {
         const randBreed = Math.floor(Math.random() * breeds.length);
         const randAge = Math.floor(Math.random() * age.length);

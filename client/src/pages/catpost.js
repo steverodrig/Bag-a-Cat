@@ -6,7 +6,6 @@ import { Button } from '../component/button';
 import $ from 'jquery';
 
 class Catpost extends Component {
-    
 
     state = {
         name: " ",
@@ -40,41 +39,32 @@ class Catpost extends Component {
 
     imageHandler = e => {
         e.preventDefault()
-    
-        // target the form
+
+
         const form = $("#uploadForm")[0];
-        // collect all data from the form (text fields AND file inputs)
         const data = new FormData(form);
-    
+
         $.ajax({
             type: "POST",
-            enctype: "multipart/form-data", // IMPORTANT!!!
+            enctype: "multipart/form-data",
             url: "/upload",
             data: data,
             processData: false,
             contentType: false,
             cache: false,
             timeout: 600000,
-            success: function(response) {
-                // celebrate a bit; the upload succeeded!
+            success: function (response) {
                 alert("Image uploaded successfully")
-                
-                
-                // the back-end sends an object containing the AWS url for the newly-uploaded 
-                // file and any additional data sent from the front-end via our AJAX post
-                console.log("this is a response " + JSON.stringify(response.location));
-    
-                // clear out the form fields for next upload
+                console.log(response);
                 $("#uploadForm")[0].reset();
             },
-            error: function(err) {
+            error: function (err) {
                 console.log(err);
             }
         });
     };
 
     render() {
-
         const { name, breed, description, age } = this.state
         return (
             <>
@@ -99,16 +89,12 @@ class Catpost extends Component {
                             <input className='app-input' name="description" value={description} onChange={this.changeHandler} />
                         </div>
                         <div>
-                            {/* <Link to={`/upload`}>Add image </Link> */}
                             <form id="uploadForm" encType="multipart/form-data" >
                                 <label htmlFor="description">File Description:</label>
                                 <input type="text" name="description" placeholder="File Description" id="description" />
-
-                                {/* <!-- the name attribute here ('upload') must match the key following 'req.files' in your back-end route! --> */}
                                 <label htmlFor="upload">Upload File:</label>
                                 <input type="file" name="upload" id="upload" />
                                 <Button buttonSize='btn--medium' buttonStyle='btn--outline' onClick={this.imageHandler}>Upload</Button>
-                                {/* <input type="submit" value="Upload File" id="submitUpload"></input> */}
                             </form>
                         </div>
                         <Button buttonSize='btn--medium' buttonStyle='btn--outline' type="submit">Submit</Button>
@@ -118,7 +104,6 @@ class Catpost extends Component {
             </>
         )
     }
-
 }
 
 export default Catpost;
