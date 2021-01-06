@@ -11,6 +11,7 @@ const CatSchema = new Schema({
     image: String,
     description: String,
     age: Number,
+    sex: String,
     adopted: Boolean
 })
 

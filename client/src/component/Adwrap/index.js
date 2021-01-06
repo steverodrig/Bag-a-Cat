@@ -38,6 +38,7 @@ function Adwrap() {
                                         description={cat.description}
                                         catID={cat._id}
                                         adoptPending={cat.adopted}
+                                        sex={cat.sex}
                                         key={cat._id}
                                     />
                                 );
