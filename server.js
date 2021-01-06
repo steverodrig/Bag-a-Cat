@@ -127,7 +127,8 @@ app.post("/upload", async (req, res) => {
     // uploading file to the bucket
     s3.upload(params, (err, response) => {
         if (err) throw err;
-    
+
+        locLink = [];
         locLink.push(response.Location);
 
         console.log(`File uploaded successfully at ${response.Location}`);
