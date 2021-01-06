@@ -7,6 +7,7 @@ const AWS = require("aws-sdk");
 const keys = require("./keys")
 let Cat = require('./models/Cat');
 let CatApp = require('./models/catApp');
+require("dotenv").config();
 // creating s3 instance (to allow uploads)
 const s3 = new AWS.S3({
   accessKeyId: keys.s3key,
@@ -43,8 +44,8 @@ app.get('/v1/catApps',function (req, res) {
 const image = locLink[0];
 // Adds new Cat
 app.post('/v1/cat/new', function (req,res) {
-  console.log(req.body);
-  dB.Cat.create(req.body, {image: image})
+  console.log("form info " + req.body);
+  dB.Cat.create(req.body)
   .then((data) => res.json(data))
   .catch(err => res.status(422).json('Could not Add: ' + err));
 

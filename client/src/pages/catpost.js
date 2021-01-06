@@ -3,15 +3,17 @@ import Footer from "../component/footer";
 import API from "../utils/API";
 import "../component/application.css"
 import { Button } from '../component/button';
+import $ from 'jquery';
 
 class Catpost extends Component {
+    
 
     state = {
         name: " ",
         breed: " ",
         description: " ",
-        image: " ",
         age: " ",
+        // image: " ",
         adopted: false
     }
 
@@ -29,15 +31,51 @@ class Catpost extends Component {
         API.postCats(this.state)
             .then(res => {
                 alert("New adoption card has been submitted.");
+                
             })
             .catch(err => {
                 console.log(err)
             })
     }
 
+    imageHandler = e => {
+        e.preventDefault()
+    
+        // target the form
+        const form = $("#uploadForm")[0];
+        // collect all data from the form (text fields AND file inputs)
+        const data = new FormData(form);
+    
+        $.ajax({
+            type: "POST",
+            enctype: "multipart/form-data", // IMPORTANT!!!
+            url: "/upload",
+            data: data,
+            processData: false,
+            contentType: false,
+            cache: false,
+            timeout: 600000,
+            success: function(response) {
+                // celebrate a bit; the upload succeeded!
+                alert("Image uploaded successfully")
+                
+                
+                // the back-end sends an object containing the AWS url for the newly-uploaded 
+                // file and any additional data sent from the front-end via our AJAX post
+                console.log("this is a response " + JSON.stringify(response.location));
+    
+                // clear out the form fields for next upload
+                $("#uploadForm")[0].reset();
+            },
+            error: function(err) {
+                console.log(err);
+            }
+        });
+    };
+
     render() {
 
-        const { name, breed, description, age, image } = this.state
+        const { name, breed, description, age } = this.state
         return (
             <>
                 <div className="app-container">
@@ -61,7 +99,17 @@ class Catpost extends Component {
                             <input className='app-input' name="description" value={description} onChange={this.changeHandler} />
                         </div>
                         <div>
+                            {/* <Link to={`/upload`}>Add image </Link> */}
+                            <form id="uploadForm" encType="multipart/form-data" >
+                                <label htmlFor="description">File Description:</label>
+                                <input type="text" name="description" placeholder="File Description" id="description" />
 
+                                {/* <!-- the name attribute here ('upload') must match the key following 'req.files' in your back-end route! --> */}
+                                <label htmlFor="upload">Upload File:</label>
+                                <input type="file" name="upload" id="upload" />
+                                <Button buttonSize='btn--medium' buttonStyle='btn--outline' onClick={this.imageHandler}>Upload</Button>
+                                {/* <input type="submit" value="Upload File" id="submitUpload"></input> */}
+                            </form>
                         </div>
                         <Button buttonSize='btn--medium' buttonStyle='btn--outline' type="submit">Submit</Button>
                     </form>
