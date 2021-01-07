@@ -21,6 +21,7 @@ function AppCard(props) {
     function handleDeny() {
         API.putAdoptedFalse(props.catID)
             .then(delApp())
+            this.history.push("/admin")
             .catch(err => console.log(err))
     }
 
