@@ -17,6 +17,10 @@
       'Lucida Sans', Arial, sans-serif;
   }
 
+  .redText {
+    color: red;
+  }
+
   .app-container > h1 {
     color: #fff;
     font-size: 60px;

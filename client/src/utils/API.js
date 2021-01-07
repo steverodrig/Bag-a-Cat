@@ -26,5 +26,8 @@ export default {
     },
     postCats: function (catData) {
         return axios.post('/v1/cat/new', catData);
+    },
+    postCatApp: function (formData) {
+        return axios.post('/v1/catApp', formData);
     }
 };

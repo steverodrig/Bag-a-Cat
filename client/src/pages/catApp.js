@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Axios from "axios";
+import API from "../utils/API";
 import Footer from "../component/footer";
 import "../component/application.css"
 import { Button } from '../component/button';
@@ -24,14 +24,19 @@ class CatApp extends Component {
     submitHandler = e => {
         e.preventDefault()
         console.log(this.state)
-        Axios.post("/v1/catApp", this.state)
-            .then(res => {
-                alert("Thank You, Your contact information has been submitted.")
-                this.props.history.push(`/adopt`);
-            })
-            .catch(err => {
-                console.log(err)
-            })
+
+        if (this.state.name === " " || this.state.email === " ") {
+            alert("Please fill out all fields");
+        } else {
+            API.postCatApp(this.state)
+                .then(res => {
+                    alert("Thank You, your contact information has been submitted.")
+                    this.props.history.push(`/adopt`);
+                })
+                .catch(err => {
+                    console.log(err)
+                })
+        }
     }
 
     render() {
@@ -52,16 +57,18 @@ class CatApp extends Component {
                             <input className='app-input' name="catID" value={catID} onChange={this.changeHandler} />
                         </div>
                         <div>
-                            <label>Your Name</label>
+                            <label>Your Name <small className="redText">*</small></label>
                             <input className='app-input' name="name" value={name} onChange={this.changeHandler} />
                         </div>
                         <div>
-                            <label>Your Email</label>
+                            <label>Your Email<small className="redText">*</small></label>
                             <input className='app-input' name="email" value={email} onChange={this.changeHandler} />
                         </div>
                         <div>
                             <label>Your Phone Number</label>
                             <input className='app-input' name="phone" value={phone} onChange={this.changeHandler} />
+                            <br></br>
+                            <small className="redText">* = required</small>
                         </div>
                         <Button buttonSize='btn--medium' buttonStyle='btn--outline' type="submit">Submit</Button>
                     </form>
