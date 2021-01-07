@@ -124,35 +124,6 @@ app.post("/upload", async (req, res) => {
   });
 });
 
-//finds cats by breed
-app.get('/v1/settings/breed', function (req, res) {
-  dB.Cat.aggregate([{
-    $match:
-      (req.body)
-    
-        // $group: {
-        //   _id: 0,
-        //     breed: { $addToSet: '$breed'},
-        //   name: { $addToSet: '$name'}
-        
-        // }
-      }
-
-    ])
-   //console.log(req.body)
-  // dB.Cat.distinct('breed')
-    .then((data) => res.json(data))
-    .catch(err => res.status(422).json(' Could not find breed ' + err));
-});
-
-app.get("/v1/catbreed", function (req, res) {
-  dB.Cat.find(req.body)
-    .then((data) => res.json(data))
-    .catch(err => res.status(422).json('Could not find breed : ' + err));
-
-});
-
-
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/catlist");
 
