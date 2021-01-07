@@ -47,6 +47,7 @@ app.post('/v1/cat/new', function (req, res) {
     image: locLink[0],
     description: req.body.description,
     age: req.body.age,
+    sex: req.body.sex,
     adopted: req.body.adopted
   }
   console.log("form info " + req.body);
