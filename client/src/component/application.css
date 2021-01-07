@@ -51,13 +51,21 @@
     margin-left: 5px;
 }
 
-.app-wrapper:hover {
-  box-shadow:0 16px 32px 0 rgba(209, 188, 1, 0.966);
-}
 
   .redText {
     color: red;
   }
+
+  .app-container > h1 {
+    color: #fff;
+    font-size: 60px;
+    margin-bottom: -20px;
+  }
+
+.app-wrapper:hover {
+  box-shadow:0 16px 32px 0 rgba(209, 188, 1, 0.966);
+}
+
 
   .app-container > h3 {
     color: rgb(255, 255, 255);
