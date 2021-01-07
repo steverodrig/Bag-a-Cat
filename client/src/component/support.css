@@ -1,21 +1,72 @@
 .support-container {
-    /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
-    height: 100vh;
+    /* background: url('../component/images/catboxing8p11.png') center center/cover no-repeat; */
+    height: 50vh;
     max-width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     object-fit: contain;
   }
+.support-wrapper {   
+    height: 50vh;
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: left;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    float: left;
+  }
+.support-wrapper-image {   
+    height: 50vh;
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: left;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    float:left
+  }
 
-  .support-container > h1 {
+  .support-wrapper > h1 {
     color: rgb(126, 112, 112);
     font-size: 50px;
+    margin-top: 50px;
     
   }
-  .support-container > h3 {
-    color: rgb(126, 112, 112);
+  .support-wrapper > h3 {
+    color: rgb(127, 158, 184);
     font-size: 25px;
+  }
+
+  @media screen and (max-width: 820px) {
+    .support-wrapper > h1 {
+      color: rgb(126, 112, 112);
+      font-size: 25px;
+      
+    }
+    .support-wrapper > h3 {
+      color: rgb(126, 112, 112);
+      font-size: 13px;
+    }
+
+    .support-wrapper {
+      height: 30vh;
+    }
+    .support-wrapper-image {
+      height: 30vh;
+    }
+
+
+  }
+
+  
+  @media screen and (max-width: 768px) {
   }
