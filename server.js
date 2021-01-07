@@ -126,7 +126,12 @@ app.post("/upload", async (req, res) => {
 });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/catlist");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/catlist", {
+  useNewUrlParser: true,
+  useFindAndModify: false,
+  useCreateIndex: true,
+  useUnifiedTopology: true
+})
 
 // Start the API server
 app.listen(PORT, function () {
