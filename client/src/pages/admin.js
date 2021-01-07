@@ -29,7 +29,7 @@ function Admin() {
                 <h1>Admin page</h1>
                 <Button
                     className='btns'
-                    buttonStyle='btn--primary'
+                    buttonStyle='btn--outline'
                     buttonSize='btn--medium'
                 >
                     <Link className='admin__item__info' to={`/catpost`}>Add a cat for adoption</Link>

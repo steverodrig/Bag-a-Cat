@@ -70,9 +70,9 @@ class Catpost extends Component {
         return (
             <>
                 <div className="app-container">
-                    <p>Enter cat's info below</p>
-                    <br></br>
-                    <form onSubmit={this.submitHandler}>
+                    <h3>Enter cat's info below</h3>
+                    <div className='app-wrapper'>
+                    <form className='app-items' onSubmit={this.submitHandler}>
                         <div>
                             <label>Cat's name: </label>
                             <input className='app-input' name="name" value={name} onChange={this.changeHandler} />
@@ -115,16 +115,23 @@ class Catpost extends Component {
                             <input className='app-input' name="description" value={description} onChange={this.changeHandler} />
                         </div>
                         <div>
-                            <form id="uploadForm" encType="multipart/form-data" >
-                                <label htmlFor="description">File Description:</label>
-                                <input type="text" name="description" placeholder="File Description" id="description" />
-                                <label htmlFor="upload">Upload File:</label>
-                                <input type="file" name="upload" id="upload" />
+                            <form  id="uploadForm" encType="multipart/form-data" >
+                                <div className='file-description'>
+                                <label  htmlFor="description">File Description:</label>
+                                <input  className='app-input' type="text" name="description" placeholder="File Description" id="description" />
+                                </div>
+                                <div className='upload-file'>
+                                <label  htmlFor="upload">Upload File:</label>                                
+                                <input className='choose-file' type="file" name="upload" id="upload" />
+                                </div>                                
                                 <Button buttonSize='btn--medium' buttonStyle='btn--outline' onClick={this.imageHandler}>Upload</Button>
-                            </form>
-                        </div>
-                        <Button buttonSize='btn--medium' buttonStyle='btn--outline' type="submit">Submit</Button>
-                    </form>
+                                </form>
+                               </div>
+                             <Button buttonSize='btn--medium' buttonStyle='btn--outline' type="submit">Submit</Button>
+                             </form>
+
+                    </div>
+                    
                 </div>
                 <Footer />
             </>
