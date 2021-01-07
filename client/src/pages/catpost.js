@@ -28,6 +28,10 @@ class Catpost extends Component {
     submitHandler = e => {
         e.preventDefault()
         console.log(this.state)
+
+        if(this.state.name === " " || this.state.breed === " " || this.state.age === " " || this.state.sex === " " || this.state.description === " ") {
+            alert("Please fill out all fields");
+        } else{
         API.postCats(this.state)
             .then(res => {
                 alert("New adoption card has been submitted.")
@@ -36,6 +40,7 @@ class Catpost extends Component {
             .catch(err => {
                 console.log(err)
             })
+        }    
     }
 
     imageHandler = e => {
@@ -79,8 +84,8 @@ class Catpost extends Component {
                         </div>
                         <div>
                             <label>Breed: </label>
-                            {/* <input className='app-input' name="breed" value={breed} onChange={this.changeHandler} /> */}
                             <select class='app-input' name="breed"value={breed} onChange={this.changeHandler} >
+                                <option></option>
                                 <option value="Sphynx Cat">Sphynx Cat</option>
                                 <option value="Ragdoll">Ragdoll</option>
                                 <option value="Siamese">Siamese</option>
@@ -103,8 +108,8 @@ class Catpost extends Component {
                         </div>
                         <div>
                             <label>Sex: </label>
-                            {/* <input className='app-input' list="sex" name="sex" value={sex} onChange={this.changeHandler} /> */}
-                            <select id="sex" name="sex" value={sex} onChange={this.changeHandler} >
+                            <select class='app-input' id="sex" name="sex" value={sex} onChange={this.changeHandler} >
+                                <option></option>
                                 <option value="male">male</option>
                                 <option value="female">female</option>
                             </select>
