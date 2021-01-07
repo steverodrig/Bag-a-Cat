@@ -28,6 +28,10 @@ class Catpost extends Component {
     submitHandler = e => {
         e.preventDefault()
         console.log(this.state)
+
+        if(this.state.name === " " || this.state.breed === " " || this.state.age === " " || this.state.sex === " " || this.state.description === " ") {
+            alert("Please fill out all fields");
+        } else{
         API.postCats(this.state)
             .then(res => {
                 alert("New adoption card has been submitted.")
@@ -36,6 +40,7 @@ class Catpost extends Component {
             .catch(err => {
                 console.log(err)
             })
+        }    
     }
 
     imageHandler = e => {
@@ -70,17 +75,17 @@ class Catpost extends Component {
         return (
             <>
                 <div className="app-container">
-                    <p>Enter cat's info below</p>
-                    <br></br>
-                    <form onSubmit={this.submitHandler}>
+                    <h3>Enter cat's info below</h3>
+                    <div className='app-wrapper'>
+                    <form className='app-items' onSubmit={this.submitHandler}>
                         <div>
                             <label>Cat's name: </label>
                             <input className='app-input' name="name" value={name} onChange={this.changeHandler} />
                         </div>
                         <div>
                             <label>Breed: </label>
-                            {/* <input className='app-input' name="breed" value={breed} onChange={this.changeHandler} /> */}
                             <select class='app-input' name="breed"value={breed} onChange={this.changeHandler} >
+                                <option></option>
                                 <option value="Sphynx Cat">Sphynx Cat</option>
                                 <option value="Ragdoll">Ragdoll</option>
                                 <option value="Siamese">Siamese</option>
@@ -103,8 +108,8 @@ class Catpost extends Component {
                         </div>
                         <div>
                             <label>Sex: </label>
-                            {/* <input className='app-input' list="sex" name="sex" value={sex} onChange={this.changeHandler} /> */}
-                            <select id="sex" name="sex" value={sex} onChange={this.changeHandler} >
+                            <select class='app-input' id="sex" name="sex" value={sex} onChange={this.changeHandler} >
+                                <option></option>
                                 <option value="male">male</option>
                                 <option value="female">female</option>
                             </select>
@@ -115,16 +120,23 @@ class Catpost extends Component {
                             <input className='app-input' name="description" value={description} onChange={this.changeHandler} />
                         </div>
                         <div>
-                            <form id="uploadForm" encType="multipart/form-data" >
-                                <label htmlFor="description">File Description:</label>
-                                <input type="text" name="description" placeholder="File Description" id="description" />
-                                <label htmlFor="upload">Upload File:</label>
-                                <input type="file" name="upload" id="upload" />
+                            <form  id="uploadForm" encType="multipart/form-data" >
+                                <div className='file-description'>
+                                <label  htmlFor="description">File Description:</label>
+                                <input  className='app-input' type="text" name="description" placeholder="File Description" id="description" />
+                                </div>
+                                <div className='upload-file'>
+                                <label  htmlFor="upload">Upload File:</label>                                
+                                <input className='choose-file' type="file" name="upload" id="upload" />
+                                </div>                                
                                 <Button buttonSize='btn--medium' buttonStyle='btn--outline' onClick={this.imageHandler}>Upload</Button>
-                            </form>
-                        </div>
-                        <Button buttonSize='btn--medium' buttonStyle='btn--outline' type="submit">Submit</Button>
-                    </form>
+                                </form>
+                               </div>
+                             <Button buttonSize='btn--medium' buttonStyle='btn--outline' type="submit">Submit</Button>
+                             </form>
+
+                    </div>
+                    
                 </div>
                 <Footer />
             </>
