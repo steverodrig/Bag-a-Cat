@@ -87,8 +87,13 @@ class Catpost extends Component {
                         </div>
                         <div>
                             <label>Sex: </label>
-                            <input className='app-input' name="sex" value={sex} onChange={this.changeHandler} />
+                            {/* <input className='app-input' list="sex" name="sex" value={sex} onChange={this.changeHandler} /> */}
+                            <select id="sex" name="sex" value={sex} onChange={this.changeHandler} >
+                                <option value="male">male</option>
+                                <option value="female">female</option>
+                            </select>
                         </div>
+                        <br></br>
                         <div>
                             <label>Description: </label>
                             <input className='app-input' name="description" value={description} onChange={this.changeHandler} />
