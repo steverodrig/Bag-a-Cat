@@ -11,6 +11,7 @@ class Catpost extends Component {
         name: " ",
         breed: " ",
         age: " ",
+        sex: " ",
         image: "holder",
         description: " ",
         adopted: false
@@ -65,7 +66,7 @@ class Catpost extends Component {
     };
 
     render() {
-        const { name, breed, description, age } = this.state
+        const { name, breed, description, age, sex } = this.state
         return (
             <>
                 <div className="app-container">
@@ -83,6 +84,10 @@ class Catpost extends Component {
                         <div>
                             <label>Age: </label>
                             <input className='app-input' name="age" value={age} onChange={this.changeHandler} />
+                        </div>
+                        <div>
+                            <label>Sex: </label>
+                            <input className='app-input' name="sex" value={sex} onChange={this.changeHandler} />
                         </div>
                         <div>
                             <label>Description: </label>
