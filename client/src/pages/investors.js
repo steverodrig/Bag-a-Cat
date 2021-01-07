@@ -10,7 +10,7 @@ function Investors() {
         <>
         <div className= 'investors-container'>
         <div className='investor-wrapper-img'>
-                <ThaBois />
+        <ThaBois />
         </div>
             <section className="investor-wrapper">            
             <p>da bois were appointed the director of Cat Care Services 

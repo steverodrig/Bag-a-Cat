@@ -3,7 +3,7 @@ import '../component/catboxing.css'
 
 function Catboxing() {
     return (
-        <div>
+        <div className='catboxing'>
           <img src='/images/catboxing8p11.png' 
           srcSet='/images/catboxing8p11.png,       
                   /images/catboxing8p11-1000.png,       
