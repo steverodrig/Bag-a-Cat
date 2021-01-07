@@ -79,7 +79,23 @@ class Catpost extends Component {
                         </div>
                         <div>
                             <label>Breed: </label>
-                            <input className='app-input' name="breed" value={breed} onChange={this.changeHandler} />
+                            {/* <input className='app-input' name="breed" value={breed} onChange={this.changeHandler} /> */}
+                            <select class='app-input' name="breed"value={breed} onChange={this.changeHandler} >
+                                <option value="Sphynx Cat">Sphynx Cat</option>
+                                <option value="Ragdoll">Ragdoll</option>
+                                <option value="Siamese">Siamese</option>
+                                <option value="Burmese">Burmese</option>
+                                <option value="Persian">Persian</option>
+                                <option value="Balinese">Balinese</option>
+                                <option value="American Wirehair">American Wirehair</option>
+                                <option value="British Shorthair">British Shorthair</option>
+                                <option value="Birman">Birman</option>
+                                <option value="Maine Coon">Maine Coon</option>
+                                <option value="American Shorthair">American Shorthair</option>
+                                <option value="Russian Blue">Russian Blue</option>
+                                <option value="Chartreux">Chartreux</option>
+                                <option value="Himalayan">Himalayan</option>
+                            </select>
                         </div>
                         <div>
                             <label>Age: </label>
