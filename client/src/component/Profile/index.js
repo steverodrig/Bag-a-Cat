@@ -9,15 +9,13 @@ const Profile = () => {
   if (isLoading) {
     return <div>Loading ...</div>;
   }
-
   return (
     isAuthenticated && (
       <div className="navbar nav-prof">
-        <img className="prof-img" referrerPolicy="no-referrer" src={user.picture}  alt={user.name} />
+        <img className="prof-img" referrerPolicy="no-referrer" src={user.picture} alt={user.name} />
         <h2 className="prof-nm" >{user.name}</h2>
-        {/* <p>{user.email}</p> */}
         <div className="logoutBtn">
-        <LogoutButton />
+          <LogoutButton />
         </div>
       </div>
     )

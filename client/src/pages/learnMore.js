@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import "../component/learnmore.css"
@@ -18,7 +17,6 @@ import {
   PinterestIcon,
 } from "react-share";
 
-
 const shareUrl = `${window.location.href}`;
 let title;
 
@@ -30,11 +28,10 @@ function LearnMore(props) {
     API.getCatDetails(props.match.params.id)
       .then(res => setCat(res.data))
       .catch(err => console.log(err));
-
   }
+
   useEffect(() => {
     loadCat()
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -55,7 +52,7 @@ function LearnMore(props) {
           <img className="cat-img" alt='cat' src={cat.image} />
           <br />
           <p>{cat.description}</p>
-          <p>I'm a {cat.age} year old {cat.breed} and I can't wait to feel your cuddles...when I want them.</p>
+          <p>I'm a {cat.age} month old, {cat.sex}, {cat.breed} and I can't wait to feel your cuddles...when I want them.</p>
           <br />
           <h3>Still interested in me?</h3>
           <Button buttonStyle='btn--outline' buttonSize='btn--large' onClick={() => handleAdoption()}><Link to={`/catApp/${props.match.params.id}`}>Apply to Adopt</Link></Button>

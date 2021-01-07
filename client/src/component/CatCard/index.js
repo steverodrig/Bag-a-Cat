@@ -23,20 +23,17 @@ function CatCard(props) {
     <li className='cards__item'>
       <Link to={`/learnMore/${props.catID}`} className='cards__item__link' >
         <figure id="kitty" className={`${classNm}`} data-category="Adoption Pending Review">
-          <img
-            className='cards__item__img'
-            alt='cat'
-            src={props.CatImage}
-          />
+          <img className='cards__item__img' alt='cat' src={props.CatImage} />
         </figure>
         <div className='cards__item__info'>
           <h5 className='cards__item__text'>{props.name}</h5>
           <br></br>
-          <h5 className='cards__item__text'>Breed: <i className="fas fa-paw"></i> {props.breed}</h5>
-          <h5 className='cards__item__text'>Age: {props.age} yrs</h5>
+          <h5 className='cards__item__text'><i className="fas fa-paw"></i> {props.breed}</h5>
+          <h5 className='cards__item__text'>{props.age} months</h5>
+          <h5 className='cards__item__text'>{props.sex}</h5>
         </div>
       </Link>
-   </li>
+    </li>
   )
 }
 

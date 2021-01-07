@@ -11,15 +11,15 @@ function Adwrap() {
     
     function loadCats() {
         API.getCats()
-        .then(res =>
-            setCats(res.data)
-             )
-             .catch(err => console.log(err));
+            .then(res =>
+                setCats(res.data)
+            )
+            .catch(err => console.log(err));
     }
-    
+
     useEffect(() => {
         loadCats()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     function updateSelectedCat(catName) {

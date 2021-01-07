@@ -13,10 +13,10 @@ function Adopt() {
         )
     } return isAuthenticated && (
         <div>
-        <Adwrap />
-        <Footer />
+            <Adwrap />
+            <Footer />
         </div>
-    )        
+    )
 }
 
 export default Adopt;
