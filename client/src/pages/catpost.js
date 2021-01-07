@@ -97,12 +97,17 @@ class Catpost extends Component {
                                 <div className='upload-file'>
                                 <label  htmlFor="upload">Upload File:</label>                                
                                 <input className='choose-file' type="file" name="upload" id="upload" />
-                                </div>                                
-                                <Button buttonSize='btn--medium' buttonStyle='btn--outline' onClick={this.imageHandler}>Upload</Button>
+                                </div>                               
                                 </form>
                                </div>
-                             <Button buttonSize='btn--medium' buttonStyle='btn--outline' type="submit">Submit</Button>
-                             </form>
+                               <div className='upload-button'>
+                               <Button buttonSize='btn--medium' buttonStyle='btn--outline' onClick={this.imageHandler}>Upload</Button>   
+                               </div>
+                                <div className='submit-button'>
+                                <Button buttonSize='btn--medium' buttonStyle='btn--outline' type="submit">Submit</Button>   
+                                </div>
+                              
+                    </form>
 
                     </div>
                     
