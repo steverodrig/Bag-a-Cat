@@ -12,7 +12,7 @@ function SearchSex(props) {
       <div>
         <label>M/F: </label>
         <select className='app-input' name="sex" onChange={(e)=>{props.updateCatSex(e.target.value)}} >
-          <option  value="">All Cats</option>
+            <option value="">All Cats</option>
             <option value="male">male</option>
             <option value="female">female</option>
         </select>
