@@ -12,7 +12,7 @@ function Contact() {
     return (
         <>
             <div className="contact-container">
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form className='customer-info' onSubmit={handleSubmit(onSubmit)}>
                     <input className='contact-input' type="text" placeholder="Email" name="email" ref={contact} />
                     <input className='contact-input' type="text" placeholder="name" name="name" ref={contact} />
                     <textarea className='message-input' type='text' placeholder='send us a message' ref={message}></textarea>

@@ -9,7 +9,7 @@ function Locations() {
                 <h1>Locations</h1>
             </div>
             <div className="location-section">
-                <ul>1234 yo mama street 782234 san antonio tx </ul>
+                <ul>1234 mama cats st 782234 san antonio tx </ul>
                 <ul>5687 panther ave 782336 san antonio tx </ul>
                 <ul>978 litter box gueyy 767894 san antonio tx </ul>
             </div>

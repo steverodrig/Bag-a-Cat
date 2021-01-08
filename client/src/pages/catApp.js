@@ -51,7 +51,7 @@ class CatApp extends Component {
                     an email confirmation after reviewing your application.
                     </p>
                     <br />
-                    <form onSubmit={this.submitHandler}>
+                    <form className='cat-application-form' onSubmit={this.submitHandler}>
                         <div>
                             <label>Cat ID</label>
                             <input className='app-input' name="catID" value={catID} onChange={this.changeHandler} />
