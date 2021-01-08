@@ -53,6 +53,7 @@ function Adwrap() {
                         age={cat.age}
                         description={cat.description}
                         catID={cat._id}
+                        sex={cat.sex}
                         adoptPending={cat.adopted}
                         key={cat._id}
                     />
@@ -68,6 +69,7 @@ function Adwrap() {
                         age={cat.age}
                         description={cat.description}
                         catID={cat._id}
+                        sex={cat.sex}
                         adoptPending={cat.adopted}
                         key={cat._id}
                     />
@@ -85,6 +87,7 @@ function Adwrap() {
                         age={cat.age}
                         description={cat.description}
                         catID={cat._id}
+                        sex={cat.sex}
                         adoptPending={cat.adopted}
                         key={cat._id}
                     />
@@ -100,6 +103,7 @@ function Adwrap() {
                         age={cat.age}
                         description={cat.description}
                         catID={cat._id}
+                        sex={cat.sex}
                         adoptPending={cat.adopted}
                         key={cat._id}
                     />

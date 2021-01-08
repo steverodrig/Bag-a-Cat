@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollToTop from "./component/ScrollToTop";
 import './App.css';
 import "./component/icons/icons"
 import Home from "./pages/home"
@@ -27,6 +28,7 @@ function App() {
   return (
     <>
        <Router>
+         <ScrollToTop />
         <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
