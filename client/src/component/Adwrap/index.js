@@ -74,7 +74,7 @@ function Adwrap() {
                 );
             })
         }
-    } else if (selectedCatSearch === 'sex') {
+    } else if (selectedCatSearch === 'sex'  || selectedCatSearch === '') {
         if(selectedCatSex === ''){
             cards = cats.map(cat => {
                 return ( 
@@ -106,8 +106,7 @@ function Adwrap() {
                 );
             })
         }
-    }
-
+    } 
 return (
   <div className='cards'>  
    <h1>Check out these EPIC Kitty Cats!</h1>

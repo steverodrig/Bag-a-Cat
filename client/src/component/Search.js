@@ -12,7 +12,7 @@ function Search(props) {
       <div>
         <label>Search: </label>
         <select className='app-input' name="breed" onChange={(e)=>{props.updateCatSearch(e.target.value)}} >
-            <option value=" ">All Cats</option>
+            <option value=" "></option>
             <option value="breed">Search by Breed</option>
             <option value="sex">Search M/F</option>
         </select>
