@@ -20,7 +20,8 @@ function SplashScreen() {
           <Link to='/adopt'>GET STARTED</Link>
         </Button>
         <Button className="memeButton" buttonSize='btn--large'>
-          <Link to='/catmemes' target="blank">CAT MEMES</Link><i className='far fa-play-circle' />
+          <a href="https://imgur.com/search/score?q=cat+memes" target="blank">CAT MEMES</a>
+          {/* <Link to='/catmemes' target="blank">CAT MEMES</Link><i className='far fa-play-circle' /> */}
         </Button>
       </div>
     </div>

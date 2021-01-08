@@ -49,9 +49,9 @@ function App() {
           <Route path='/support' component={Support} />
           <Route path='/locations' component={Locations} /> 
           <Route path='/catpost'  component={Catpost} /> 
-          <Route path= '/catmemes' component={() => {window.location.href = "https://imgur.com/search/score?q=cat+memes"; return null}}/>
-          <Route path= '/YouTube' component={() => {window.location.href = "https://www.youtube.com/channel/UCNo5PGwGmfnEprEUUb9AGgw"; return null}}/>
-          <Route path= '/Cattitude' component={() => {window.location.href = "https://scratch.mit.edu/projects/404898794/fullscreen/"; return null}}/>
+          {/* <Route path= '/catmemes' component={() => {window.location.href = "https://imgur.com/search/score?q=cat+memes"; return null}}/> */}
+          {/* <Route path= '/YouTube' component={() => {window.location.href = "https://www.youtube.com/channel/UCNo5PGwGmfnEprEUUb9AGgw"; return null}}/> */}
+          {/* <Route path= '/Cattitude' component={() => {window.location.href = "https://scratch.mit.edu/projects/404898794/fullscreen/"; return null}}/> */}
         </Switch>
       </Router>
     </>
