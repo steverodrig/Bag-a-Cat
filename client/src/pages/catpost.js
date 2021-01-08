@@ -11,6 +11,7 @@ class Catpost extends Component {
         name: " ",
         breed: " ",
         age: " ",
+        sex: " ",
         image: "holder",
         description: " ",
         adopted: false
@@ -27,6 +28,10 @@ class Catpost extends Component {
     submitHandler = e => {
         e.preventDefault()
         console.log(this.state)
+
+        if(this.state.name === " " || this.state.breed === " " || this.state.age === " " || this.state.sex === " " || this.state.description === " ") {
+            alert("Please fill out all fields");
+        } else{
         API.postCats(this.state)
             .then(res => {
                 alert("New adoption card has been submitted.")
@@ -35,6 +40,7 @@ class Catpost extends Component {
             .catch(err => {
                 console.log(err)
             })
+        }    
     }
 
     imageHandler = e => {
@@ -65,7 +71,7 @@ class Catpost extends Component {
     };
 
     render() {
-        const { name, breed, description, age } = this.state
+        const { name, breed, description, age, sex } = this.state
         return (
             <>
                 <div className="app-container">
@@ -78,12 +84,37 @@ class Catpost extends Component {
                         </div>
                         <div>
                             <label>Breed: </label>
-                            <input className='app-input' name="breed" value={breed} onChange={this.changeHandler} />
+                            <select class='app-input' name="breed"value={breed} onChange={this.changeHandler} >
+                                <option></option>
+                                <option value="Sphynx Cat">Sphynx Cat</option>
+                                <option value="Ragdoll">Ragdoll</option>
+                                <option value="Siamese">Siamese</option>
+                                <option value="Burmese">Burmese</option>
+                                <option value="Persian">Persian</option>
+                                <option value="Balinese">Balinese</option>
+                                <option value="American Wirehair">American Wirehair</option>
+                                <option value="British Shorthair">British Shorthair</option>
+                                <option value="Birman">Birman</option>
+                                <option value="Maine Coon">Maine Coon</option>
+                                <option value="American Shorthair">American Shorthair</option>
+                                <option value="Russian Blue">Russian Blue</option>
+                                <option value="Chartreux">Chartreux</option>
+                                <option value="Himalayan">Himalayan</option>
+                            </select>
                         </div>
                         <div>
                             <label>Age: </label>
                             <input className='app-input' name="age" value={age} onChange={this.changeHandler} />
                         </div>
+                        <div>
+                            <label>Sex: </label>
+                            <select class='app-input' id="sex" name="sex" value={sex} onChange={this.changeHandler} >
+                                <option></option>
+                                <option value="male">male</option>
+                                <option value="female">female</option>
+                            </select>
+                        </div>
+                        <br></br>
                         <div>
                             <label>Description: </label>
                             <input className='app-input' name="description" value={description} onChange={this.changeHandler} />

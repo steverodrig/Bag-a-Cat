@@ -16,7 +16,9 @@ const s3 = new AWS.S3({
 let locLink = [];
 const PORT = process.env.PORT || 3001;
 // Define middleware here
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+  extended: true
+}));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -45,6 +47,7 @@ app.post('/v1/cat/new', function (req, res) {
     image: locLink[0],
     description: req.body.description,
     age: req.body.age,
+    sex: req.body.sex,
     adopted: req.body.adopted
   }
   console.log("form info " + req.body);
@@ -123,7 +126,7 @@ app.post("/upload", async (req, res) => {
 });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/catlist");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/catlist")
 
 // Start the API server
 app.listen(PORT, function () {

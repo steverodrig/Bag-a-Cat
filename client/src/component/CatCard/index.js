@@ -27,9 +27,13 @@ function CatCard(props) {
         </figure>
         <div className='cards__item__info'>
           <h5 className='cards__item__text'>{props.name}</h5>
+          <hr></hr>
           <br></br>
-          <h5 className='cards__item__text'>Breed: <i className="fas fa-paw"></i> {props.breed}</h5>
-          <h5 className='cards__item__text'>Age: {props.age} yrs</h5>
+          <h5 className='cards__item__text'><i className="fas fa-paw"></i> {props.breed}</h5>
+          <hr></hr>
+          <h5 className='cards__item__text'>{props.age} mos</h5>
+          <hr></hr>
+          <h5 className='cards__item__text'>{props.sex}</h5>
         </div>
       </Link>
     </li>
