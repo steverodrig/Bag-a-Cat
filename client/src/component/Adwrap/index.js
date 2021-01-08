@@ -47,27 +47,29 @@ function Adwrap() {
                                             catID={cat._id}
                                             adoptPending={cat.adopted}
                                             key={cat._id}
+                                            sex={cat.sex}
                                         />
                                     );
                                 }))
-                                : (
-                                    cats.filter(cat => cat.breed === selectedCat)
-                                        .map(cat => {
-                                            return (
-                                                <CatCard
-                                                    CatImage={cat.image}
-                                                    name={cat.name}
-                                                    breed={cat.breed}
-                                                    age={cat.age}
-                                                    description={cat.description}
-                                                    catID={cat._id}
-                                                    adoptPending={cat.adopted}
-                                                    key={cat._id}
-                                                />
-                                            );
-                                        })
+                                : (cats.filter(cat => cat.breed === selectedCat)
+                                    .map(cat => {              
+                                        return (
+                                            <CatCard
+                                                CatImage={cat.image}
+                                                name={cat.name}
+                                                breed={cat.breed}
+                                                age={cat.age}
+                                                description={cat.description}
+                                                catID={cat._id}
+                                                adoptPending={cat.adopted}
+                                                key={cat._id}
+                                                sex={cat.sex}
+                                            />
+                                        );
+                                    })
                                 )
                             }
+
                         </ul>
                     ) : (
                             <h3>No cats available at this time.  Sorry.</h3>
