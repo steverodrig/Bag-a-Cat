@@ -1,5 +1,5 @@
 import React from 'react'
-import '../component/thaBois.css'
+
 
 function ThaBois() {
     return (

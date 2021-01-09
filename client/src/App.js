@@ -20,8 +20,11 @@ import Contact from "./pages/contact"
 import Support from "./pages/support"
 import Locations from "./pages/locations"
 import Investors from "./pages/investors"
+
 import { BrowserRouter as Router, Switch,  Route, } from "react-router-dom";
 import Testimonials from "./pages/testimonials";
+
+
 
 function App() {
   
@@ -44,11 +47,11 @@ function App() {
           <Route path='/admin' component={Admin} />
           <Route path='/errorPage'component={ErrorPage} />
           <Route path='/catApp/:id' component={CatApp} />         
-          <Route path='/investors' component={Investors} />
           <Route path='/contact' component={Contact} />
           <Route path='/support' component={Support} />
           <Route path='/locations' component={Locations} /> 
           <Route path='/catpost'  component={Catpost} /> 
+          <Route path='/investors'  component={Investors} /> 
         </Switch>
       </Router>
     </>
@@ -56,3 +59,5 @@ function App() {
 }
 
 export default App;
+
+
