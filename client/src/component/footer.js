@@ -16,7 +16,7 @@ import {
   PinterestIcon,
 } from "react-share";
 
-const shareUrl = 'https://enigmatic-eyrie-23492.herokuapp.com/';
+const shareUrl = 'https://bag-a-cat.herokuapp.com/';
 const title = 'B-A-C';
 
 function Footer() {
@@ -81,8 +81,10 @@ function Footer() {
           <div className='footer-link-items'>
             <h2>Videos</h2>
             <Link to='/'>Submit Video</Link>
-            <Link to='/YouTube' target="blank">YouTube</Link>
-            <Link to='/Cattitude' target="blank">Cattitude</Link>
+            <a href="https://www.youtube.com/channel/UCNo5PGwGmfnEprEUUb9AGgw" target="blank">YouTube</a>
+            {/* <Link to='/YouTube' target="blank">YouTube</Link> */}
+            <a href="https://scratch.mit.edu/projects/404898794/fullscreen/" target="blank">Cattitude</a>
+            {/* <Link to='/Cattitude' target="blank">Cattitude</Link> */}
           </div>
           <div className='footer-link-items'>
             <h2>Legal</h2>

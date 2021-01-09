@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import "../admin.css"
 import API from "../../utils/API";
 import { Button } from "../button";
-
+import { Route } from "react-router-dom";
 
 function AppCard(props) {
 

@@ -8,7 +8,7 @@ function Catboxing() {
           srcSet='/images/catboxing8p11.png,       
                   /images/catboxing8p11-1000.png,       
                   /images/catboxing8p11-1500.png'         
-          alt=''></img>  
+          alt='cats'></img>  
         </div>
     )
 }
