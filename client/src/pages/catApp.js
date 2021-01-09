@@ -5,7 +5,7 @@ import "../component/application.css"
 import { Button } from '../component/button';
 
 class CatApp extends Component {
-
+    
     state = {
         catID: " ",
         name: " ",
@@ -23,12 +23,13 @@ class CatApp extends Component {
 
     submitHandler = e => {
         e.preventDefault()
+        
         if (this.state.name === " " || this.state.email === " ") {
             alert("Please fill out all fields");
         } else {
             API.postCatApp(this.state)
                 .then(res => {
-                    alert("Thank You, your contact information has been submitted.")
+                    alert(`Thank You ${this.state.name}, your contact information has been submitted.`)
                     this.props.history.push(`/adopt`);
                 })
                 .catch(err => {

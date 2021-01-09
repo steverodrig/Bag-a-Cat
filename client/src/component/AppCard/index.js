@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import "../admin.css"
 import API from "../../utils/API";
 import { Button } from "../button";
-import { Route } from "react-router-dom";
 
 function AppCard(props) {
 
@@ -14,7 +13,7 @@ function AppCard(props) {
 
     function delApp() {
         API.deleteApplication(props.id)
-            .then(console.log("Application deleted"))
+            .then(console.log(`Application for ${props.catID} deleted`))
             .catch(err => console.log(err))
     }
 
