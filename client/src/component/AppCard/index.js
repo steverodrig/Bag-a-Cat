@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import "../admin.css"
 import API from "../../utils/API";
 import { Button } from "../button";
-
+import { Route } from "react-router-dom";
 
 function AppCard(props) {
 
@@ -21,7 +21,6 @@ function AppCard(props) {
     function handleDeny() {
         API.putAdoptedFalse(props.catID)
             .then(delApp())
-            this.history.push("/admin")
             .catch(err => console.log(err))
     }
 

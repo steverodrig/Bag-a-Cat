@@ -23,8 +23,6 @@ class CatApp extends Component {
 
     submitHandler = e => {
         e.preventDefault()
-        console.log(this.state)
-
         if (this.state.name === " " || this.state.email === " ") {
             alert("Please fill out all fields");
         } else {
